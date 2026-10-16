@@ -45,19 +45,20 @@
             "zh-hant": "特製 鹽味",
             "ko": "특제 시오"
           },
-          "img": "shio-tokusei.jpg",
+          "img": "cut-shio-tokusei.webp",
           "desc": {
             "ja": "味玉と焼豚がたっぷりのった特製。",
             "en": "Deluxe bowl topped generously with ajitama (seasoned egg) and chashu pork.",
             "zh-hans": "加满溏心蛋和叉烧的特制版。",
             "zh-hant": "加滿糖心蛋和叉燒的特製版。",
             "ko": "아지타마(맛계란)와 차슈를 듬뿍 올린 특제."
-          }
+          },
+          "cutout": true
         },
         {
           "id": "shoyu",
           "price": 1000,
-          "img": "shoyu.jpg",
+          "img": "cut-shoyu.webp",
           "name": {
             "ja": "中華そば 醤油",
             "en": "Chuka Soba — Shoyu (soy sauce)",
@@ -72,7 +73,8 @@
             "zh-hant": "雞高湯。",
             "ko": "닭 육수."
           },
-          "wide": true
+          "wide": true,
+          "cutout": true
         },
         {
           "id": "shoyu-ajitama",
@@ -95,14 +97,15 @@
             "zh-hant": "特製 醬油味",
             "ko": "특제 쇼유"
           },
-          "img": "shoyu-tokusei.jpg",
+          "img": "cut-shoyu-tokusei.webp",
           "desc": {
             "ja": "味玉と焼豚がたっぷりのった特製。",
             "en": "Deluxe bowl topped generously with ajitama (seasoned egg) and chashu pork.",
             "zh-hans": "加满溏心蛋和叉烧的特制版。",
             "zh-hant": "加滿糖心蛋和叉燒的特製版。",
             "ko": "아지타마(맛계란)와 차슈를 듬뿍 올린 특제."
-          }
+          },
+          "cutout": true
         }
       ]
     },
@@ -126,7 +129,8 @@
             "zh-hant": "極粗手揉麵搭配豬背脂。",
             "ko": "아주 굵은 손주름면에 돼지 등지방을 더한 한 그릇."
           },
-          "img": "seabura.jpg"
+          "img": "cut-seabura.webp",
+          "cutout": true
         },
         {
           "id": "tsukemen",
@@ -161,7 +165,7 @@
             "zh-hant": "京都小麥 香露拉麵「秋」",
             "ko": "교토 밀 코로 소바 ‘가을’"
           },
-          "img": "koro-aki.jpg",
+          "img": "cut-koro-aki.webp",
           "desc": {
             "ja": "さつまいもとかぼちゃをのせた、秋の期間限定の一杯。",
             "en": "A limited autumn bowl topped with sweet potato and kabocha squash.",
@@ -169,7 +173,8 @@
             "zh-hant": "放上地瓜和南瓜的秋季限定一碗。",
             "ko": "고구마와 단호박을 올린 가을 기간 한정 한 그릇."
           },
-          "tall": true
+          "cutout": true,
+          "wide": true
         },
         {
           "id": "cement",
@@ -250,7 +255,8 @@
           }
         }
       ],
-      "img": "oisoba.jpg"
+      "img": "cut-oisoba.webp",
+      "cutout": true
     },
     {
       "id": "rice",
@@ -265,7 +271,8 @@
             "zh-hant": "白飯",
             "ko": "밥"
           },
-          "img": "gohan.jpg"
+          "img": "cut-gohan.webp",
+          "cutout": true
         },
         {
           "id": "tkg",
@@ -277,7 +284,8 @@
             "zh-hant": "柴魚片雞油生雞蛋拌飯",
             "ko": "가쓰오부시 향 닭기름 TKG(날달걀 밥)"
           },
-          "img": "tkg.jpg"
+          "img": "cut-tkg.webp",
+          "cutout": true
         },
         {
           "id": "chashu-meshi",
@@ -289,7 +297,8 @@
             "zh-hant": "叉燒飯",
             "ko": "차슈 덮밥"
           },
-          "img": "chashu-meshi.jpg"
+          "img": "cut-chashu-meshi.webp",
+          "cutout": true
         },
         {
           "id": "lurou",
@@ -301,7 +310,8 @@
             "zh-hant": "滷肉飯",
             "ko": "루러우판(대만식 돼지고기 조림 덮밥)"
           },
-          "img": "lurou.jpg"
+          "img": "cut-lurou.webp",
+          "cutout": true
         },
         {
           "id": "lurou-mini",
@@ -389,8 +399,8 @@
             "zh-hant": "三得利頂級啤酒（中瓶）",
             "ko": "더 프리미엄 몰츠 맥주 (중병)"
           },
-          "img": "beer.jpg",
-          "fit": "contain"
+          "img": "cut-beer.webp",
+          "cutout": true
         }
       ]
     }

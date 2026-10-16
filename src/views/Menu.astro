@@ -26,7 +26,7 @@ const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisoba
         <section class="menu-group" id={c.id}>
           <h2>{(m.cats as any)[c.id]}</h2>
           {c.img && (
-            <figure class="cat-photo">
+            <figure class={`cat-photo ${c.cutout ? 'is-cutout' : ''}`}>
               <img src={withBase('images/' + c.img)} alt={(m.cats as any)[c.id]} width="350" height="429" loading="lazy" decoding="async" />
               {notes[c.id] && <figcaption>{notes[c.id]}</figcaption>}
             </figure>
@@ -34,7 +34,7 @@ const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisoba
           {featured.length > 0 && (
             <div class="menu-featured">
               {featured.map((i: any) => (
-                <article class={`dish ${i.recommended || i.wide ? 'is-wide' : ''} ${i.tall ? 'is-tall' : ''} ${i.fit === 'contain' ? 'is-product' : ''}`}>
+                <article class={`dish ${i.recommended || i.wide ? 'is-wide' : ''} ${i.cutout ? 'is-cutout' : ''}`}>
                   <img src={withBase('images/' + i.img)} alt={pick(i.name, lang)} width="1200" height="960" loading="lazy" decoding="async" />
                   <div class="dish-body">
                     {i.recommended && <p class="stamp">{d.ui.recommended}</p>}

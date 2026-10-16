@@ -54,7 +54,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
     </div>
     <div class="wrap signature-subs">
       {subs.map((it) => (
-        <article class="dish">
+        <article class={`dish ${it.cutout ? 'is-cutout' : ''}`}>
           <img src={withBase('images/' + it.img)} alt={pick(it.name, lang)} width="1200" height="960" loading="lazy" decoding="async" />
           <h3>{pick(it.name, lang)}</h3>
           <p class="price">{yen(it.price)}</p>
@@ -99,7 +99,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
         <p>{h.oisobaBody}</p>
         <p class="muted">{h.oisobaNote}</p>
       </div>
-      <img class="oisoba-photo" src={withBase('images/oisoba.jpg')} alt={h.oisobaTitle} width="350" height="429" loading="lazy" decoding="async" />
+      <img class="oisoba-photo is-cutout" src={withBase('images/cut-oisoba.webp')} alt={h.oisobaTitle} width="350" height="429" loading="lazy" decoding="async" />
     </div>
   </section>
 
