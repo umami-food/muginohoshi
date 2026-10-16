@@ -45,7 +45,14 @@
             "zh-hant": "特製 鹽味",
             "ko": "특제 시오"
           },
-          "img": "shio-tokusei.jpg"
+          "img": "shio-tokusei.jpg",
+          "desc": {
+            "ja": "味玉と焼豚がたっぷりのった特製。",
+            "en": "Deluxe bowl topped generously with ajitama (seasoned egg) and chashu pork.",
+            "zh-hans": "加满溏心蛋和叉烧的特制版。",
+            "zh-hant": "加滿糖心蛋和叉燒的特製版。",
+            "ko": "아지타마(맛계란)와 차슈를 듬뿍 올린 특제."
+          }
         },
         {
           "id": "shoyu",
@@ -64,7 +71,8 @@
             "zh-hans": "鸡高汤。",
             "zh-hant": "雞高湯。",
             "ko": "닭 육수."
-          }
+          },
+          "wide": true
         },
         {
           "id": "shoyu-ajitama",
@@ -87,7 +95,14 @@
             "zh-hant": "特製 醬油味",
             "ko": "특제 쇼유"
           },
-          "img": "shoyu-tokusei.jpg"
+          "img": "shoyu-tokusei.jpg",
+          "desc": {
+            "ja": "味玉と焼豚がたっぷりのった特製。",
+            "en": "Deluxe bowl topped generously with ajitama (seasoned egg) and chashu pork.",
+            "zh-hans": "加满溏心蛋和叉烧的特制版。",
+            "zh-hant": "加滿糖心蛋和叉燒的特製版。",
+            "ko": "아지타마(맛계란)와 차슈를 듬뿍 올린 특제."
+          }
         }
       ]
     },
@@ -248,7 +263,8 @@
             "zh-hans": "白饭",
             "zh-hant": "白飯",
             "ko": "밥"
-          }
+          },
+          "img": "gohan.jpg"
         },
         {
           "id": "tkg",
@@ -370,7 +386,9 @@
             "zh-hans": "三得利顶级啤酒（中瓶）",
             "zh-hant": "三得利頂級啤酒（中瓶）",
             "ko": "더 프리미엄 몰츠 맥주 (중병)"
-          }
+          },
+          "img": "beer.jpg",
+          "fit": "contain"
         }
       ]
     }

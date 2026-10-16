@@ -1,0 +1,16 @@
+---
+import { t, withBase, type Lang } from '../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const o = t(lang).owner;
+---
+<section class="section owner">
+  <div class="wrap owner-grid">
+    <img src={withBase('images/owner.jpg')} alt={o.alt} width="1000" height="1250" loading="lazy" decoding="async" />
+    <figure class="owner-text">
+      <h2 class="section-title">{o.title}</h2>
+      <blockquote><p>{o.quote}</p></blockquote>
+      <figcaption>{o.name}</figcaption>
+    </figure>
+  </div>
+</section>

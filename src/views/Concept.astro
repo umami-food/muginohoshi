@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import OwnerBlock from '../components/OwnerBlock.astro';
 import { t, withBase, pagePath, type Lang } from '../lib/i18n';
 const { lang } = Astro.props as { lang: Lang };
 const d = t(lang);
@@ -8,7 +9,7 @@ const isJa = lang === 'ja';
 const photos = [
   { src: 'noodles-close.jpg', w: 1200, h: 900, alt: c.photoAlts.noodles },
   { src: 'seimen-room.jpg', w: 1000, h: 1250, alt: c.photoAlts.seimen },
-  { src: 'shio.jpg', w: 860, h: 860, alt: d.home.signatureTitle },
+  { src: 'shio.jpg', w: 1280, h: 960, alt: d.home.signatureTitle },
   { src: 'counter.jpg', w: 1000, h: 1250, alt: c.photoAlts.counter },
 ];
 ---
@@ -30,6 +31,7 @@ const photos = [
         </div>
       </section>
     ))}
-    <p class="center"><a class="btn btn-line" href={pagePath(lang, 'menu')}>{d.ui.viewMenu}</a></p>
   </div>
+  <OwnerBlock lang={lang} />
+  <p class="center concept-cta"><a class="btn btn-line" href={pagePath(lang, 'menu')}>{d.ui.viewMenu}</a></p>
 </Base>

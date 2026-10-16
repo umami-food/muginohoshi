@@ -27,20 +27,20 @@ const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisoba
           <h2>{(m.cats as any)[c.id]}</h2>
           {c.img && (
             <figure class="cat-photo">
-              <img src={withBase('images/' + c.img)} alt={(m.cats as any)[c.id]} width="318" height="318" loading="lazy" decoding="async" />
+              <img src={withBase('images/' + c.img)} alt={(m.cats as any)[c.id]} width="350" height="429" loading="lazy" decoding="async" />
               {notes[c.id] && <figcaption>{notes[c.id]}</figcaption>}
             </figure>
           )}
           {featured.length > 0 && (
             <div class="menu-featured">
               {featured.map((i: any) => (
-                <article class={`menu-card ${i.recommended ? 'is-recommended' : ''}`}>
-                  <img src={withBase('images/' + i.img)} alt={pick(i.name, lang)} width="860" height="860" loading="lazy" decoding="async" />
-                  <div>
+                <article class={`dish ${i.recommended || i.wide ? 'is-wide' : ''} ${i.fit === 'contain' ? 'is-product' : ''}`}>
+                  <img src={withBase('images/' + i.img)} alt={pick(i.name, lang)} width="1200" height="960" loading="lazy" decoding="async" />
+                  <div class="dish-body">
                     {i.recommended && <p class="stamp">{d.ui.recommended}</p>}
                     <h3>{pick(i.name, lang)}</h3>
                     {lang !== 'ja' && <p class="menu-ja" lang="ja">{i.name.ja}</p>}
-                    {i.desc && <p class="muted">{pick(i.desc, lang)}</p>}
+                    {i.desc && <p class="dish-desc">{pick(i.desc, lang)}</p>}
                     <p class="price">{yen(i.price)}</p>
                   </div>
                 </article>

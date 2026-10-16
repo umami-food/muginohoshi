@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import InfoList from '../components/InfoList.astro';
+import MapBlock from '../components/MapBlock.astro';
+import OwnerBlock from '../components/OwnerBlock.astro';
 import site from '../data/site.json';
 import menu from '../data/menu.json';
 import { t, pick, pagePath, withBase, yen, type Lang } from '../lib/i18n';
@@ -10,8 +12,9 @@ const d = t(lang);
 const h = d.home;
 const isJa = lang === 'ja';
 const items = menu.categories.flatMap((c) => c.items) as any[];
-const shio = items.find((i) => i.id === 'shio');
-const shoyu = items.find((i) => i.id === 'shoyu');
+const get = (id: string) => items.find((i) => i.id === id);
+const shio = get('shio');
+const subs = [get('shoyu'), get('shio-tokusei'), get('seabura')];
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.name + ' ' + site.address.ja)}`;
 ---
 <Base lang={lang} page="home" title={d.seo.home.title} description={d.seo.home.description} jsonLd={restaurantJsonLd(lang, Astro.site!)}>
@@ -37,6 +40,43 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
     </div>
   </div>
 
+  <section class="signature">
+    <div class="signature-main">
+      <img class="signature-photo" src={withBase('images/' + shio.img)} alt={pick(shio.name, lang)} width="1280" height="960" loading="lazy" decoding="async" />
+      <div class="signature-text">
+        <h2 class="section-title">{h.signatureTitle}</h2>
+        <p class="signature-lead">{h.signatureLead}</p>
+        <p class="stamp">{d.ui.recommended}</p>
+        <h3>{pick(shio.name, lang)}</h3>
+        <p class="signature-desc">{pick(shio.desc, lang)}</p>
+        <p class="price">{yen(shio.price)}</p>
+      </div>
+    </div>
+    <div class="wrap signature-subs">
+      {subs.map((it) => (
+        <article class="dish">
+          <img src={withBase('images/' + it.img)} alt={pick(it.name, lang)} width="1200" height="960" loading="lazy" decoding="async" />
+          <h3>{pick(it.name, lang)}</h3>
+          <p class="price">{yen(it.price)}</p>
+        </article>
+      ))}
+    </div>
+    <p class="center signature-cta"><a class="btn btn-light" href={pagePath(lang, 'menu')}>{d.ui.viewMenu}</a></p>
+  </section>
+
+  <section class="section vibe">
+    <div class="wrap vibe-grid">
+      <img class="vibe-main" src={withBase('images/exterior.jpg')} alt={d.access.photoAlts.exterior} width="1280" height="960" loading="lazy" decoding="async" />
+      <div class="vibe-text">
+        <h2 class="section-title">{h.vibeTitle}</h2>
+        <p>{h.vibeBody}</p>
+      </div>
+      <img class="vibe-sub" src={withBase('images/counter.jpg')} alt={d.access.photoAlts.counter} width="1000" height="1250" loading="lazy" decoding="async" />
+      <img class="vibe-sub" src={withBase('images/tables.jpg')} alt={d.access.photoAlts.tables} width="1000" height="1250" loading="lazy" decoding="async" />
+      <img class="vibe-sub" src={withBase("images/entrance.jpg")} alt={d.access.photoAlts.entrance} width="1000" height="1250" decoding="async" />
+    </div>
+  </section>
+
   <section class="section philosophy">
     <div class="wrap philosophy-grid">
       <div class={`philosophy-lines ${isJa ? 'is-vertical' : ''}`}>
@@ -50,24 +90,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
     </div>
   </section>
 
-  <section class="section signature">
-    <div class="wrap">
-      <h2 class="section-title">{h.signatureTitle}</h2>
-      <p class="section-lead">{h.signatureLead}</p>
-      <div class="bowls">
-        {[shio, shoyu].map((it) => (
-          <article class={`bowl ${it.recommended ? 'is-recommended' : ''}`}>
-            <img src={withBase('images/' + it.img)} alt={pick(it.name, lang)} width="860" height="860" loading="lazy" decoding="async" />
-            {it.recommended && <p class="stamp">{d.ui.recommended}</p>}
-            <h3>{pick(it.name, lang)}</h3>
-            <p class="muted">{pick(it.desc, lang)}</p>
-            <p class="price">{yen(it.price)}</p>
-          </article>
-        ))}
-      </div>
-      <p class="center"><a class="btn btn-line" href={pagePath(lang, 'menu')}>{d.ui.viewMenu}</a></p>
-    </div>
-  </section>
+  <OwnerBlock lang={lang} />
 
   <section class="section oisoba">
     <div class="wrap oisoba-grid">
@@ -76,7 +99,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
         <p>{h.oisobaBody}</p>
         <p class="muted">{h.oisobaNote}</p>
       </div>
-      <img class="oisoba-photo" src={withBase('images/oisoba.jpg')} alt={h.oisobaTitle} width="350" height="350" loading="lazy" decoding="async" />
+      <img class="oisoba-photo" src={withBase('images/oisoba.jpg')} alt={h.oisobaTitle} width="350" height="429" loading="lazy" decoding="async" />
     </div>
   </section>
 
@@ -92,7 +115,6 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
 
   <section class="section store">
     <div class="wrap store-grid">
-      <img src={withBase('images/exterior.jpg')} alt={d.access.photoAlts.entrance} width="1200" height="900" loading="lazy" decoding="async" />
       <div>
         <h2 class="section-title">{h.storeTitle}</h2>
         <InfoList lang={lang} />
@@ -101,6 +123,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
           <a class="btn btn-line" href={pagePath(lang, 'access')}>{d.nav.access}</a>
         </p>
       </div>
+      <div><MapBlock lang={lang} /></div>
     </div>
   </section>
 </Base>

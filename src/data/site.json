@@ -19,11 +19,11 @@
     "lng": 136.9172
   },
   "station": {
-    "ja": "地下鉄東山線 新栄町駅から徒歩1分",
-    "en": "1 min walk from Shinsakae-machi Station (Higashiyama Subway Line)",
-    "zh-hans": "地铁东山线 新荣町站步行1分钟",
-    "zh-hant": "地下鐵東山線 新榮町站步行1分鐘",
-    "ko": "지하철 히가시야마선 신사카에마치역에서 도보 1분"
+    "ja": "地下鉄東山線 新栄町駅 2番出口から徒歩1分",
+    "en": "1 min walk from Exit 2 of Shinsakae-machi Station (Higashiyama Subway Line)",
+    "zh-hans": "地铁东山线 新荣町站2号出口步行1分钟",
+    "zh-hant": "地下鐵東山線 新榮町站2號出口步行1分鐘",
+    "ko": "지하철 히가시야마선 신사카에마치역 2번 출구에서 도보 1분"
   },
   "hours": [
     {
