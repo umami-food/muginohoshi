@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { t, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const d = t(lang);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: d.faq.items.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })),
+};
+---
+<Base lang={lang} page="faq" title={d.seo.faq.title} description={d.seo.faq.description} jsonLd={jsonLd}>
+  <PageHead title={d.faq.title} />
+  <section class="section">
+    <div class="wrap narrow">
+      <div class="faq-list">
+        {d.faq.items.map((i) => (
+          <details><summary>{i.q}</summary><p class="answer">{i.a}</p></details>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

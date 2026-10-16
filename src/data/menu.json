@@ -1,0 +1,378 @@
+{
+  "_説明": "メニューの中身です。価格は税込・カンマなしの数字で書きます。写真がある料理は img に public/images の中のファイル名を書きます。期間限定のメニューを入れ替えるときは limited の中を書き換えてください。",
+  "categories": [
+    {
+      "id": "chukasoba",
+      "items": [
+        {
+          "id": "shio",
+          "price": 1000,
+          "img": "shio.jpg",
+          "recommended": true,
+          "name": {
+            "ja": "中華そば 塩",
+            "en": "Chuka Soba — Shio (salt)",
+            "zh-hans": "中华拉面 盐味",
+            "zh-hant": "中華拉麵 鹽味",
+            "ko": "주카소바 시오(소금)"
+          },
+          "desc": {
+            "ja": "魚介だしのスープ。麦の星のいちばんのおすすめです。",
+            "en": "Seafood-based broth. Our most recommended bowl.",
+            "zh-hans": "鱼介高汤。本店最推荐的一碗。",
+            "zh-hant": "魚介高湯。本店最推薦的一碗。",
+            "ko": "어패류 육수. 무기노호시가 가장 추천하는 한 그릇입니다."
+          }
+        },
+        {
+          "id": "shio-ajitama",
+          "price": 1150,
+          "name": {
+            "ja": "【味玉】中華そば 塩",
+            "en": "Shio with Ajitama (seasoned egg)",
+            "zh-hans": "盐味 加溏心蛋",
+            "zh-hant": "鹽味 加糖心蛋",
+            "ko": "시오 + 아지타마(맛계란)"
+          }
+        },
+        {
+          "id": "shio-tokusei",
+          "price": 1350,
+          "name": {
+            "ja": "【特製】中華そば 塩",
+            "en": "Tokusei (deluxe) Shio",
+            "zh-hans": "特制 盐味",
+            "zh-hant": "特製 鹽味",
+            "ko": "특제 시오"
+          },
+          "img": "shio-tokusei.jpg"
+        },
+        {
+          "id": "shoyu",
+          "price": 1000,
+          "img": "shoyu.jpg",
+          "name": {
+            "ja": "中華そば 醤油",
+            "en": "Chuka Soba — Shoyu (soy sauce)",
+            "zh-hans": "中华拉面 酱油味",
+            "zh-hant": "中華拉麵 醬油味",
+            "ko": "주카소바 쇼유(간장)"
+          },
+          "desc": {
+            "ja": "鶏だしのスープ。",
+            "en": "Chicken-based broth.",
+            "zh-hans": "鸡高汤。",
+            "zh-hant": "雞高湯。",
+            "ko": "닭 육수."
+          }
+        },
+        {
+          "id": "shoyu-ajitama",
+          "price": 1150,
+          "name": {
+            "ja": "【味玉】中華そば 醤油",
+            "en": "Shoyu with Ajitama (seasoned egg)",
+            "zh-hans": "酱油味 加溏心蛋",
+            "zh-hant": "醬油味 加糖心蛋",
+            "ko": "쇼유 + 아지타마(맛계란)"
+          }
+        },
+        {
+          "id": "shoyu-tokusei",
+          "price": 1350,
+          "name": {
+            "ja": "【特製】中華そば 醤油",
+            "en": "Tokusei (deluxe) Shoyu",
+            "zh-hans": "特制 酱油味",
+            "zh-hant": "特製 醬油味",
+            "ko": "특제 쇼유"
+          },
+          "img": "shoyu-tokusei.jpg"
+        }
+      ]
+    },
+    {
+      "id": "regular",
+      "items": [
+        {
+          "id": "seabura",
+          "price": 1100,
+          "name": {
+            "ja": "極太手揉み背脂そば",
+            "en": "Extra-thick hand-crimped noodles with back fat",
+            "zh-hans": "极粗手揉面 背脂拉面",
+            "zh-hant": "極粗手揉麵 背脂拉麵",
+            "ko": "극태 손주름면 세아부라 소바"
+          },
+          "desc": {
+            "ja": "極太の手揉み麺に、背脂を合わせた一杯。",
+            "en": "Extra-thick, hand-crimped noodles topped with pork back fat.",
+            "zh-hans": "极粗手揉面搭配猪背脂。",
+            "zh-hant": "極粗手揉麵搭配豬背脂。",
+            "ko": "아주 굵은 손주름면에 돼지 등지방을 더한 한 그릇."
+          },
+          "img": "seabura.jpg"
+        },
+        {
+          "id": "tsukemen",
+          "price": 1100,
+          "name": {
+            "ja": "濃厚昆布水の焙煎小麦つけ麺",
+            "en": "Roasted-wheat tsukemen in rich kombu water",
+            "zh-hans": "浓厚昆布水 焙煎小麦沾面",
+            "zh-hant": "濃厚昆布水 焙煎小麥沾麵",
+            "ko": "진한 다시마물 배전 밀 츠케멘"
+          },
+          "desc": {
+            "ja": "焙煎した小麦の麺を、濃厚な昆布水とともに。つけ汁につけて食べます。",
+            "en": "Noodles made with roasted wheat, served in rich kombu (kelp) water. Dip them in the sauce to eat.",
+            "zh-hans": "焙煎小麦面泡在浓厚的昆布水中，蘸着蘸汁享用。",
+            "zh-hant": "焙煎小麥麵泡在濃厚的昆布水中，沾著沾汁享用。",
+            "ko": "볶은 밀로 만든 면을 진한 다시마물에 담았습니다. 츠케지루(소스)에 찍어 드세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "limited",
+      "items": [
+        {
+          "id": "koro-aki",
+          "price": 1200,
+          "name": {
+            "ja": "京小麦の香露そば“秋”",
+            "en": "Kyoto Wheat Koro Soba “Autumn”",
+            "zh-hans": "京都小麦 香露拉面“秋”",
+            "zh-hant": "京都小麥 香露拉麵「秋」",
+            "ko": "교토 밀 코로 소바 ‘가을’"
+          },
+          "img": "koro-aki.jpg",
+          "desc": {
+            "ja": "さつまいもとかぼちゃをのせた、秋の期間限定の一杯。",
+            "en": "A limited autumn bowl topped with sweet potato and kabocha squash.",
+            "zh-hans": "放上红薯和南瓜的秋季限定一碗。",
+            "zh-hant": "放上地瓜和南瓜的秋季限定一碗。",
+            "ko": "고구마와 단호박을 올린 가을 기간 한정 한 그릇."
+          }
+        },
+        {
+          "id": "cement",
+          "price": 1100,
+          "name": {
+            "ja": "セメント煮干し中華蕎麦",
+            "en": "“Cement” Niboshi Chuka Soba",
+            "zh-hans": "“水泥”小鱼干拉面",
+            "zh-hant": "「水泥」小魚乾拉麵",
+            "ko": "‘시멘트’ 니보시 주카소바"
+          },
+          "desc": {
+            "ja": "煮干しを贅沢に使った、セメントのように濃い色のスープ。",
+            "en": "An intensely rich dried-sardine (niboshi) broth, thick and grey like cement.",
+            "zh-hans": "大量使用小鱼干熬制，汤色浓如水泥。",
+            "zh-hant": "大量使用小魚乾熬製，湯色濃如水泥。",
+            "ko": "멸치(니보시)를 듬뿍 써서 시멘트처럼 진한 색의 수프."
+          }
+        },
+        {
+          "id": "cement-ajitama",
+          "price": 1250,
+          "name": {
+            "ja": "【味玉】セメント煮干し中華蕎麦",
+            "en": "“Cement” Niboshi with Ajitama",
+            "zh-hans": "“水泥”小鱼干拉面 加溏心蛋",
+            "zh-hant": "「水泥」小魚乾拉麵 加糖心蛋",
+            "ko": "‘시멘트’ 니보시 + 아지타마"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oisoba",
+      "items": [
+        {
+          "id": "oi-shio",
+          "price": 300,
+          "name": {
+            "ja": "追いそば 塩（100g）",
+            "en": "Oi-soba Shio (100 g)",
+            "zh-hans": "追加拌面 盐味（100g）",
+            "zh-hant": "追加拌麵 鹽味（100g）",
+            "ko": "오이소바 시오 (100g)"
+          }
+        },
+        {
+          "id": "oi-shoyu",
+          "price": 300,
+          "name": {
+            "ja": "追いそば 醤油（100g）",
+            "en": "Oi-soba Shoyu (100 g)",
+            "zh-hans": "追加拌面 酱油味（100g）",
+            "zh-hant": "追加拌麵 醬油味（100g）",
+            "ko": "오이소바 쇼유 (100g)"
+          }
+        },
+        {
+          "id": "oi-jiro",
+          "price": 400,
+          "name": {
+            "ja": "追いそば プティ・ジロー（100g）",
+            "en": "Oi-soba Petit Jiro (100 g)",
+            "zh-hans": "追加拌面 Petit Jiro（100g）",
+            "zh-hant": "追加拌麵 Petit Jiro（100g）",
+            "ko": "오이소바 프티 지로 (100g)"
+          }
+        },
+        {
+          "id": "kaedama",
+          "price": 200,
+          "name": {
+            "ja": "替え玉（100g）",
+            "en": "Kaedama — extra plain noodles (100 g)",
+            "zh-hans": "加面（原味，100g）",
+            "zh-hant": "加麵（原味，100g）",
+            "ko": "카에다마 — 면 추가 (100g)"
+          }
+        }
+      ],
+      "img": "oisoba.jpg"
+    },
+    {
+      "id": "rice",
+      "items": [
+        {
+          "id": "gohan",
+          "price": 200,
+          "name": {
+            "ja": "ごはん",
+            "en": "Rice",
+            "zh-hans": "白饭",
+            "zh-hant": "白飯",
+            "ko": "밥"
+          }
+        },
+        {
+          "id": "tkg",
+          "price": 300,
+          "name": {
+            "ja": "削り節香る鶏油TKG",
+            "en": "TKG — raw egg on rice with bonito flakes & chicken oil",
+            "zh-hans": "柴鱼片鸡油生鸡蛋拌饭",
+            "zh-hant": "柴魚片雞油生雞蛋拌飯",
+            "ko": "가쓰오부시 향 닭기름 TKG(날달걀 밥)"
+          },
+          "img": "tkg.jpg"
+        },
+        {
+          "id": "chashu-meshi",
+          "price": 400,
+          "name": {
+            "ja": "焼豚めし",
+            "en": "Chashu pork rice bowl",
+            "zh-hans": "叉烧饭",
+            "zh-hant": "叉燒飯",
+            "ko": "차슈 덮밥"
+          }
+        },
+        {
+          "id": "lurou",
+          "price": 450,
+          "name": {
+            "ja": "ルーロー飯",
+            "en": "Lu rou fan (Taiwanese braised pork rice)",
+            "zh-hans": "卤肉饭",
+            "zh-hant": "滷肉飯",
+            "ko": "루러우판(대만식 돼지고기 조림 덮밥)"
+          },
+          "img": "lurou.jpg"
+        },
+        {
+          "id": "lurou-mini",
+          "price": 250,
+          "name": {
+            "ja": "ミニルーロー飯",
+            "en": "Mini lu rou fan",
+            "zh-hans": "迷你卤肉饭",
+            "zh-hant": "迷你滷肉飯",
+            "ko": "미니 루러우판"
+          }
+        }
+      ]
+    },
+    {
+      "id": "topping",
+      "items": [
+        {
+          "id": "t-ajitama",
+          "price": 150,
+          "name": {
+            "ja": "味玉",
+            "en": "Ajitama (seasoned egg)",
+            "zh-hans": "溏心蛋",
+            "zh-hant": "糖心蛋",
+            "ko": "아지타마(맛계란)"
+          }
+        },
+        {
+          "id": "t-nori",
+          "price": 100,
+          "name": {
+            "ja": "国産バラ海苔",
+            "en": "Japanese loose nori seaweed",
+            "zh-hans": "日本产散海苔",
+            "zh-hant": "日本產散海苔",
+            "ko": "국산 바라 김"
+          }
+        },
+        {
+          "id": "t-seabura",
+          "price": 100,
+          "name": {
+            "ja": "味付け背脂",
+            "en": "Seasoned back fat",
+            "zh-hans": "调味背脂",
+            "zh-hant": "調味背脂",
+            "ko": "양념 세아부라(등지방)"
+          }
+        },
+        {
+          "id": "t-tokusei",
+          "price": 350,
+          "name": {
+            "ja": "特製具材増し",
+            "en": "Extra deluxe toppings",
+            "zh-hans": "特制配料加量",
+            "zh-hant": "特製配料加量",
+            "ko": "특제 토핑 추가"
+          }
+        },
+        {
+          "id": "t-kakuni",
+          "price": 400,
+          "name": {
+            "ja": "豚角煮",
+            "en": "Braised pork belly",
+            "zh-hans": "红烧猪五花",
+            "zh-hant": "滷豬五花",
+            "ko": "돼지고기 가쿠니(조림)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "drink",
+      "items": [
+        {
+          "id": "beer",
+          "price": 600,
+          "name": {
+            "ja": "ザ・プレミアム・モルツ 中瓶",
+            "en": "The Premium Malt's beer (medium bottle)",
+            "zh-hans": "三得利顶级啤酒（中瓶）",
+            "zh-hant": "三得利頂級啤酒（中瓶）",
+            "ko": "더 프리미엄 몰츠 맥주 (중병)"
+          }
+        }
+      ]
+    }
+  ]
+}

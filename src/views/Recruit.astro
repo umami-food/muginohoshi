@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import site from '../data/site.json';
+import { t, withBase, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const d = t(lang);
+const r = d.recruit;
+const photos = ['recruit-1.jpg', 'recruit-2.jpg', 'recruit-3.jpg'];
+---
+<Base lang={lang} page="recruit" title={d.seo.recruit.title} description={d.seo.recruit.description}>
+  <PageHead title={r.title} lead={r.lead} />
+  <section class="section">
+    <div class="wrap photo-row">
+      {photos.map((p, i) => <img src={withBase('images/' + p)} alt={r.photoAlts[i]} width="1000" height="1250" loading="lazy" decoding="async" />)}
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap jobs">
+      <article class="job">
+        <h2>{r.regular.title}</h2>
+        <p>{r.regular.body}</p>
+        <a class="btn btn-primary" href={site.recruit.regularUrl} target="_blank" rel="noopener">{r.regular.cta}</a>
+      </article>
+      <article class="job">
+        <h2>{r.part.title}</h2>
+        <p>{r.part.body}</p>
+        <a class="btn btn-primary" href={site.recruit.partUrl} target="_blank" rel="noopener">{r.part.cta}</a>
+      </article>
+    </div>
+    <div class="wrap narrow"><p class="muted center">{r.note}</p></div>
+  </section>
+</Base>

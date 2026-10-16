@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import InfoList from '../components/InfoList.astro';
+import MapBlock from '../components/MapBlock.astro';
+import { t, withBase, type Lang } from '../lib/i18n';
+import { restaurantJsonLd } from '../lib/jsonld';
+const { lang } = Astro.props as { lang: Lang };
+const d = t(lang);
+const a = d.access;
+---
+<Base lang={lang} page="access" title={d.seo.access.title} description={d.seo.access.description} jsonLd={restaurantJsonLd(lang, Astro.site!)}>
+  <PageHead title={a.title} lead={a.lead} />
+  <section class="section">
+    <div class="wrap info-grid">
+      <div>
+        <MapBlock lang={lang} />
+        <h2 class="sub-title">{a.directionsTitle}</h2>
+        <ol class="steps">
+          {a.directions.map((s) => <li>{s}</li>)}
+        </ol>
+      </div>
+      <div>
+        <InfoList lang={lang} />
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap photo-row">
+      <img src={withBase('images/entrance.jpg')} alt={a.photoAlts.entrance} width="1000" height="1250" loading="lazy" decoding="async" />
+      <img src={withBase('images/counter.jpg')} alt={a.photoAlts.counter} width="1000" height="1250" loading="lazy" decoding="async" />
+      <img src={withBase('images/tables.jpg')} alt={a.photoAlts.tables} width="1000" height="1250" loading="lazy" decoding="async" />
+    </div>
+  </section>
+</Base>

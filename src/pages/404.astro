@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import { LANGS, t, pagePath } from '../lib/i18n';
+const d = t('ja');
+---
+<Base lang="ja" page={null} title={`${d.notFound.title}｜${site.name}`} description={d.notFound.body}>
+  <section class="notfound">
+    <div class="wrap narrow">
+      <h1>{d.notFound.title}</h1>
+      <ul>
+        {LANGS.map((l) => (
+          <li lang={t(l).lang.html}>
+            <strong>{t(l).notFound.title}</strong>
+            <span class="muted">{t(l).notFound.body}</span><br />
+            <a href={pagePath(l, 'home')}>{t(l).ui.backHome}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

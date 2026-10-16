@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import menu from '../data/menu.json';
+import { t, pick, withBase, yen, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const d = t(lang);
+const m = d.menu;
+const cats = menu.categories as any[];
+const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisobaNote, rice: m.tkgNote };
+---
+<Base lang={lang} page="menu" title={d.seo.menu.title} description={d.seo.menu.description}>
+  <PageHead title={m.title} lead={m.lead} />
+  <nav class="cat-nav" aria-label={m.title}>
+    <div class="wrap">
+      <ul>
+        {cats.map((c) => <li><a href={`#${c.id}`}>{(m.cats as any)[c.id]}</a></li>)}
+      </ul>
+    </div>
+  </nav>
+  <div class="wrap menu-wrap">
+    {cats.map((c) => {
+      const featured = c.items.filter((i: any) => i.img);
+      const rest = c.items.filter((i: any) => !i.img);
+      return (
+        <section class="menu-group" id={c.id}>
+          <h2>{(m.cats as any)[c.id]}</h2>
+          {c.img && (
+            <figure class="cat-photo">
+              <img src={withBase('images/' + c.img)} alt={(m.cats as any)[c.id]} width="318" height="318" loading="lazy" decoding="async" />
+              {notes[c.id] && <figcaption>{notes[c.id]}</figcaption>}
+            </figure>
+          )}
+          {featured.length > 0 && (
+            <div class="menu-featured">
+              {featured.map((i: any) => (
+                <article class={`menu-card ${i.recommended ? 'is-recommended' : ''}`}>
+                  <img src={withBase('images/' + i.img)} alt={pick(i.name, lang)} width="860" height="860" loading="lazy" decoding="async" />
+                  <div>
+                    {i.recommended && <p class="stamp">{d.ui.recommended}</p>}
+                    <h3>{pick(i.name, lang)}</h3>
+                    {lang !== 'ja' && <p class="menu-ja" lang="ja">{i.name.ja}</p>}
+                    {i.desc && <p class="muted">{pick(i.desc, lang)}</p>}
+                    <p class="price">{yen(i.price)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+          {rest.length > 0 && (
+            <ul class="menu-list">
+              {rest.map((i: any) => (
+                <li>
+                  <div>
+                    <span class="menu-name">{pick(i.name, lang)}</span>
+                    {lang !== 'ja' && <span class="menu-ja" lang="ja">{i.name.ja}</span>}
+                    {i.desc && <span class="menu-desc muted">{pick(i.desc, lang)}</span>}
+                  </div>
+                  <span class="price">{yen(i.price)}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          {notes[c.id] && !c.img && <p class="menu-note muted">{notes[c.id]}</p>}
+        </section>
+      );
+    })}
+    <p class="menu-note">{d.ui.taxIncl}</p>
+  </div>
+</Base>

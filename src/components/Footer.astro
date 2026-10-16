@@ -1,0 +1,36 @@
+---
+import site from '../data/site.json';
+import InstagramIcon from './InstagramIcon.astro';
+import { LANGS, t, pagePath, withBase, type Lang, type PageKey } from '../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const navPages: PageKey[] = ['home', 'menu', 'concept', 'access', 'faq', 'recruit'];
+const addr = lang === 'ja' ? site.address.ja : site.address.en;
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-shop">
+        <img class="footer-logo" src={withBase('images/logo-white.webp')} alt={site.name} width="480" height="515" loading="lazy" />
+        <div>
+          <p>{addr}</p>
+          <p><a href={`tel:${site.phoneIntl}`}>{lang === 'ja' ? site.phone : site.phoneIntlDisplay}</a></p>
+          <p><a href={site.instagram} target="_blank" rel="noopener"><InstagramIcon /> {site.instagramHandle}</a></p>
+          <p><a href={site.tabelog} target="_blank" rel="noopener">{d.ui.tabelog}</a></p>
+        </div>
+      </div>
+      <nav aria-label={d.ui.openMenu}>
+        <ul>
+          {navPages.map((p) => <li><a href={pagePath(lang, p)}>{d.nav[p]}</a></li>)}
+        </ul>
+      </nav>
+      <div>
+        <h2>{d.ui.language}</h2>
+        <ul>{LANGS.map((l) => <li><a href={pagePath(l, 'home')} lang={t(l).lang.html} hreflang={t(l).lang.html}>{t(l).lang.label}</a></li>)}</ul>
+      </div>
+    </div>
+    <p class="copyright">© {year} {site.nameEn}</p>
+  </div>
+</footer>

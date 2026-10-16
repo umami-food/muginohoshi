@@ -1,0 +1,134 @@
+---
+// 日本語の書体は細かく分割されていて、ページで使う文字の分だけ読み込まれます
+import '@fontsource/zen-old-mincho/600.css';
+import '@fontsource/zen-kaku-gothic-new/400.css';
+import '@fontsource/zen-kaku-gothic-new/700.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import site from '../data/site.json';
+import { LANGS, DEFAULT_LANG, t, pagePath, withBase, type Lang, type PageKey } from '../lib/i18n';
+
+interface Props {
+  lang: Lang;
+  page: PageKey | null;   // null は 404 ページ
+  title: string;
+  description: string;
+  jsonLd?: object;
+}
+const { lang, page, title, description, jsonLd } = Astro.props;
+const d = t(lang);
+const siteUrl = Astro.site!;
+const abs = (p: string) => new URL(p, siteUrl).href;
+const canonical = page ? abs(pagePath(lang, page)) : undefined;
+const ogImage = abs(withBase('images/og.jpg'));
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.name + ' ' + site.address.ja)}`;
+
+// 言語案内バナー用：各言語版のURLと文言
+const bannerData = page
+  ? Object.fromEntries(LANGS.map((l) => [l, { url: pagePath(l, page), ...t(l).banner }]))
+  : null;
+---
+<!doctype html>
+<html lang={d.lang.html}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href={withBase('favicon.png')} type="image/png" />
+  <link rel="apple-touch-icon" href={withBase('apple-touch-icon.png')} />
+  {canonical && <link rel="canonical" href={canonical} />}
+  {page && LANGS.map((l) => <link rel="alternate" hreflang={t(l).lang.html} href={abs(pagePath(l, page))} />)}
+  {page && <link rel="alternate" hreflang="x-default" href={abs(pagePath(DEFAULT_LANG, page))} />}
+  {!page && <meta name="robots" content="noindex" />}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  {canonical && <meta property="og:url" content={canonical} />}
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content={d.lang.ogLocale} />
+  {LANGS.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={t(l).lang.ogLocale} />)}
+  <meta name="twitter:card" content="summary_large_image" />
+
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+</head>
+<body>
+  <a class="skip-link" href="#main">{d.ui.skip}</a>
+  {bannerData && (
+    <div class="lang-banner" id="lang-banner" data-current={lang} data-langs={JSON.stringify(bannerData)} role="region" aria-live="polite">
+      <div class="wrap">
+        <span data-text></span>
+        <a data-link href="#"></a>
+        <button type="button" data-close></button>
+      </div>
+    </div>
+  )}
+  <Header lang={lang} page={page} />
+  <main id="main">
+    <slot />
+  </main>
+  <Footer lang={lang} />
+
+  <div class="mobile-bar">
+    <a class="btn btn-line" href={pagePath(lang, 'menu')}>{d.nav.menu}</a>
+    <a class="btn btn-primary" href={mapsUrl} target="_blank" rel="noopener">{d.ui.viewAccess}</a>
+  </div>
+
+  <script>
+    // スマホのメニュー開閉
+    const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+    const nav = document.getElementById('site-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? toggle.dataset.close! : toggle.dataset.open!);
+        nav.classList.toggle('is-open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) toggle.click();
+      });
+    }
+
+    // ブラウザの言語に合わせて、その言語版があることを控えめに案内する（自動転送はしない）
+    const banner = document.getElementById('lang-banner');
+    if (banner) {
+      const current = banner.dataset.current!;
+      const langs = JSON.parse(banner.dataset.langs || '{}');
+      const match = (tag: string): string | null => {
+        const l = tag.toLowerCase();
+        if (l.startsWith('ja')) return 'ja';
+        if (l.startsWith('ko')) return 'ko';
+        if (l.startsWith('en')) return 'en';
+        if (/^zh-(tw|hk|mo|hant)/.test(l)) return 'zh-hant';
+        if (l.startsWith('zh')) return 'zh-hans';
+        return null;
+      };
+      let dismissed = false;
+      try { dismissed = sessionStorage.getItem('langBannerClosed') === '1'; } catch {}
+      const pref = (navigator.languages || [navigator.language]).map(match).find(Boolean);
+      if (!dismissed && pref && pref !== current && langs[pref]) {
+        const b = langs[pref];
+        banner.querySelector('[data-text]')!.textContent = b.text;
+        const a = banner.querySelector<HTMLAnchorElement>('[data-link]')!;
+        a.textContent = b.action; a.href = b.url; a.lang = pref;
+        const c = banner.querySelector<HTMLButtonElement>('[data-close]')!;
+        c.textContent = b.close;
+        banner.lang = pref;
+        banner.classList.add('is-visible');
+        c.addEventListener('click', () => {
+          banner.classList.remove('is-visible');
+          try { sessionStorage.setItem('langBannerClosed', '1'); } catch {}
+        });
+      }
+    }
+  </script>
+</body>
+</html>

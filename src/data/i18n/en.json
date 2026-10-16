@@ -1,0 +1,87 @@
+{
+  "lang": { "html": "en", "label": "English", "ogLocale": "en_US" },
+  "banner": { "text": "This page is available in English.", "action": "View in English", "close": "Close" },
+  "nav": { "home": "Home", "menu": "Menu", "concept": "Our noodles", "access": "Access", "faq": "FAQ", "recruit": "Careers" },
+  "ui": {
+    "skip": "Skip to content", "openMenu": "Open menu", "closeMenu": "Close menu", "language": "Language",
+    "hours": "Hours", "closed": "Closed", "address": "Address", "station": "Nearest station", "phone": "Phone",
+    "payments": "Payment", "reservation": "Reservations", "backHome": "Back to the home page",
+    "viewMenu": "See the menu", "viewConcept": "Read about our noodles", "viewAccess": "See the map",
+    "openMaps": "Open in a map app", "taxIncl": "All prices include tax.", "recommended": "Most recommended",
+    "instagram": "Instagram", "tabelog": "Tabelog", "noLastOrder": "No last order — open until closing time",
+    "holidayInfo": "Extra closing days are announced on Instagram", "badgeAlt": "Ramen Hyakumeiten (Top 100) AICHI 2025",
+    "logoAlt": "Chuka Soba MUGI no HOSHI"
+  },
+  "seo": {
+    "home": { "title": "中華そば 麦の星 MUGI no HOSHI｜House-made noodle ramen in Nagoya", "description": "A ramen shop built around noodles made in our own noodle room. 1 min from Shinsakae-machi Station, Nagoya. Tabelog Ramen Hyakumeiten 2025." },
+    "menu": { "title": "Menu｜中華そば 麦の星 MUGI no HOSHI", "description": "Shio and shoyu chuka soba, back-fat noodles, kombu-water tsukemen, oi-soba, rice dishes and more. All prices include tax." },
+    "concept": { "title": "Our noodles｜中華そば 麦の星 MUGI no HOSHI", "description": "We make the noodles first, from Japanese wheat, then choose the soup and the way to eat them. This is what we call Mugi-kei." },
+    "access": { "title": "Access｜中華そば 麦の星 MUGI no HOSHI", "description": "1F Murakami Bldg., 1-22-14 Aoi, Naka-ku, Nagoya. 1 min walk from Shinsakae-machi Station. Hours and closing days." },
+    "faq": { "title": "FAQ｜中華そば 麦の星 MUGI no HOSHI", "description": "Reservations, payment, the ticket machine, and the difference between oi-soba and kaedama." },
+    "recruit": { "title": "Careers｜中華そば 麦の星 MUGI no HOSHI", "description": "MUGI no HOSHI is hiring full-time and part-time staff." }
+  },
+  "home": {
+    "heroCopy": "Taste the finest noodles.",
+    "heroSub": "House-made noodle ramen, 1 min from Shinsakae-machi Station",
+    "philosophyLines": ["We search for the finest noodles,", "pair them with the right soup,", "and create a bowl like no other.", "Shock the world with ramen featuring noodles!"],
+    "philosophyBody": "We use wheat from many regions of Japan and make our noodles first, in the noodle room inside the shop. Then we choose the soup and the way to eat them to suit those noodles. We call this order Mugi-kei — \u201cwheat style.\u201d",
+    "signatureTitle": "Our signature chuka soba",
+    "signatureLead": "Noodles, soup and toppings — every part of our signature bowl has been reworked.",
+    "oisobaTitle": "Oi-soba",
+    "oisobaBody": "Oi-soba is a small bowl of mazesoba (soupless, sauced noodles). Unlike kaedama (extra plain noodles), it is already seasoned, so it is delicious on its own. You can also add it to the soup left in your chuka soba.",
+    "oisobaNote": "The oi-soba noodles change from time to time: thin noodles with a crisp bite, flat noodles, green noodles made with spinach powder, and more.",
+    "howTitle": "How to order",
+    "howSteps": ["Buy a meal ticket at the ticket machine by the entrance first. Cash only.", "Take your ticket and have a seat."],
+    "howNote": "We do not take reservations. On days when a new dish is released, there may be a line outside.",
+    "storeTitle": "About the shop"
+  },
+  "menu": {
+    "title": "Menu",
+    "lead": "Every bowl is served with noodles made in our own shop.",
+    "cats": { "chukasoba": "Chuka soba", "regular": "Regulars", "limited": "Limited time", "oisoba": "Oi-soba & kaedama", "rice": "Rice dishes", "topping": "Toppings", "drink": "Drinks" },
+    "oisobaNote": "Oi-soba is a small, seasoned mazesoba. Kaedama is an extra serving of plain, unseasoned noodles.",
+    "limitedNote": "Limited-time dishes may end when they sell out.",
+    "tkgNote": "TKG contains raw egg."
+  },
+  "concept": {
+    "title": "Our noodles",
+    "lead": "A will to master noodles. A never-ending path of noodle making.",
+    "sections": [
+      { "title": "Ramen that starts with the noodles", "body": "At MUGI no HOSHI, every bowl starts with the noodles. We make them from carefully chosen wheat from many regions of Japan, then look for the soup and the way of eating that suit those noodles best. We call this style Mugi-kei." },
+      { "title": "Our noodle room", "body": "Our noodles are made in the noodle room at the back of the shop. You can see into it through a window from the dining area." },
+      { "title": "Seafood broth for shio, chicken broth for shoyu", "body": "Our signature chuka soba comes in two kinds. The shio (salt) soup is made with seafood broth, and the shoyu (soy sauce) soup with chicken broth. Each is paired with its own noodles." },
+      { "title": "One more kind of noodle with oi-soba", "body": "The oi-soba noodles change from time to time: thin noodles, flat noodles, green noodles made with spinach. Enjoying a different noodle after your bowl of chuka soba is something only a noodle-making shop can offer." }
+    ],
+    "photoAlts": { "noodles": "House-made noodles of different thicknesses and shapes", "seimen": "The noodle room, seen through a window from the dining area", "counter": "The wooden counter and the open kitchen" }
+  },
+  "access": {
+    "title": "Access",
+    "lead": "1 min walk from Shinsakae-machi Station on the Higashiyama Subway Line.",
+    "mapTitle": "Map",
+    "directionsTitle": "Directions",
+    "directions": ["Get off at Shinsakae-machi Station on the Higashiyama Subway Line.", "The shop is about 110 m (1 min) from the station. Look for the yellow entrance and the lit-up \u201cMUGI no HOSHI\u201d sign."],
+    "photoAlts": { "entrance": "The yellow entrance with the MUGI no HOSHI sign", "counter": "Wooden counter seats", "tables": "Table seats at the back" }
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      { "q": "Can I make a reservation?", "a": "No. We do not take reservations. Guests are seated in order of arrival." },
+      { "q": "How can I pay?", "a": "Cash only. Please buy a meal ticket at the ticket machine by the entrance first. Credit cards, e-money and QR code payments are not accepted." },
+      { "q": "How do I order?", "a": "Buy a meal ticket at the ticket machine by the entrance, then take a seat." },
+      { "q": "What is the difference between oi-soba and kaedama?", "a": "Oi-soba is a small, seasoned mazesoba. You can eat it as it is, or add it to the soup left in your chuka soba. Kaedama is an extra serving of plain, unseasoned noodles." },
+      { "q": "It's my first visit. What do you recommend?", "a": "We recommend the Chuka Soba Shio most of all: seafood broth with our house-made noodles." },
+      { "q": "Is there a line?", "a": "On days when a new dish is released, there may be a line outside." },
+      { "q": "When are you closed?", "a": "On Wednesdays. We also close on some other days (New Year, staff training, etc.) and announce them on Instagram in advance." },
+      { "q": "Is there a last order time?", "a": "No. We serve until closing time." }
+    ]
+  },
+  "recruit": {
+    "title": "Careers",
+    "lead": "Join us in working on noodles and aiming for the best bowl.",
+    "regular": { "title": "Full-time", "body": "Learn every part of a noodle-making ramen shop, from noodle making and cooking to running the shop.", "cta": "See full-time jobs" },
+    "part": { "title": "Part-time", "body": "We are looking for people to support the shop with us, from serving guests to helping in the kitchen.", "cta": "See part-time jobs" },
+    "note": "Please apply from the job page (in Japanese). Working hours and pay are also listed there.",
+    "photoAlts": ["The owner and staff with a bowl of chuka soba", "A staff member serving chuka soba across the counter", "The owner and staff arranging toppings"]
+  },
+  "notFound": { "title": "Page not found", "body": "The page you are looking for may have been moved or deleted." }
+}

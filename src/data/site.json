@@ -1,0 +1,116 @@
+{
+  "_説明": "店舗の基本情報です。ここを書き換えると、全ページ・全言語に反映されます。",
+  "name": "中華そば 麦の星",
+  "nameEn": "MUGI no HOSHI",
+  "phone": "052-908-1167",
+  "phoneIntl": "+81529081167",
+  "phoneIntlDisplay": "+81-52-908-1167",
+  "address": {
+    "ja": "〒460-0006 愛知県名古屋市中区葵1-22-14 村上ビル 1F",
+    "en": "1F Murakami Bldg., 1-22-14 Aoi, Naka-ku, Nagoya, Aichi 460-0006, Japan"
+  },
+  "postalCode": "460-0006",
+  "streetAddressEn": "1F Murakami Bldg., 1-22-14 Aoi",
+  "locality": "Naka-ku, Nagoya",
+  "region": "Aichi",
+  "_geoの説明": "地図アプリ用の位置（緯度・経度）。Googleマップでお店を右クリックすると正確な数字が出ます。",
+  "geo": {
+    "lat": 35.1712,
+    "lng": 136.9172
+  },
+  "station": {
+    "ja": "地下鉄東山線 新栄町駅から徒歩1分",
+    "en": "1 min walk from Shinsakae-machi Station (Higashiyama Subway Line)",
+    "zh-hans": "地铁东山线 新荣町站步行1分钟",
+    "zh-hant": "地下鐵東山線 新榮町站步行1分鐘",
+    "ko": "지하철 히가시야마선 신사카에마치역에서 도보 1분"
+  },
+  "hours": [
+    {
+      "days": {
+        "ja": "月・火・木・金",
+        "en": "Mon, Tue, Thu, Fri",
+        "zh-hans": "周一、二、四、五",
+        "zh-hant": "週一、二、四、五",
+        "ko": "월·화·목·금"
+      },
+      "time": "11:00–16:00 / 17:30–22:00"
+    },
+    {
+      "days": {
+        "ja": "土・日・祝日",
+        "en": "Sat, Sun & holidays",
+        "zh-hans": "周六、日及节假日",
+        "zh-hant": "週六、日及國定假日",
+        "ko": "토·일·공휴일"
+      },
+      "time": "11:00–22:00"
+    }
+  ],
+  "openingHoursSpec": [
+    {
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "11:00",
+      "closes": "16:00"
+    },
+    {
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "17:30",
+      "closes": "22:00"
+    },
+    {
+      "dayOfWeek": [
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "11:00",
+      "closes": "22:00"
+    }
+  ],
+  "closed": {
+    "ja": "水曜日（年末年始・研修などで臨時休業あり。Instagramで事前にお知らせします）",
+    "en": "Wednesdays. We also close on some other days (New Year, staff training, etc.) and announce them on Instagram in advance.",
+    "zh-hans": "周三（年末年初、员工培训等会临时休息，将提前在Instagram公告）",
+    "zh-hant": "週三（年末年初、員工研習等會臨時公休，將提前在Instagram公告）",
+    "ko": "수요일 (연말연시·연수 등으로 임시 휴무가 있으며, 인스타그램에서 미리 알려 드립니다)"
+  },
+  "closedShort": {
+    "ja": "水曜日",
+    "en": "Wednesdays",
+    "zh-hans": "周三",
+    "zh-hant": "週三",
+    "ko": "수요일"
+  },
+  "payments": {
+    "ja": "現金のみ（券売機）",
+    "en": "Cash only (ticket machine)",
+    "zh-hans": "仅限现金（自动售票机）",
+    "zh-hant": "僅收現金（自動售票機）",
+    "ko": "현금만 가능 (식권 발매기)"
+  },
+  "reservation": {
+    "ja": "予約不可",
+    "en": "No reservations",
+    "zh-hans": "不接受预约",
+    "zh-hant": "不接受訂位",
+    "ko": "예약 불가"
+  },
+  "priceRange": "¥1,000–¥1,999",
+  "instagram": "https://www.instagram.com/mugi_no_hoshi/",
+  "instagramHandle": "@mugi_no_hoshi",
+  "tabelog": "https://tabelog.com/aichi/A2301/A230104/23085316/",
+  "recruit": {
+    "regularUrl": "https://saiyo.page/123330/job-list/sort=osusume&page=1&baitFlgList=regular&freewords=%E9%BA%A6%E3%81%AE%E6%98%9F",
+    "partUrl": "https://saiyo.page/123330/job-list/sort=osusume&page=1&baitFlgList=normal&freewords=%E9%BA%A6%E3%81%AE%E6%98%9F"
+  }
+}

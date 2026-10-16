@@ -1,0 +1,45 @@
+---
+import site from '../data/site.json';
+import InstagramIcon from './InstagramIcon.astro';
+import { LANGS, t, pagePath, withBase, type Lang, type PageKey } from '../lib/i18n';
+interface Props { lang: Lang; page: PageKey | null }
+const { lang, page } = Astro.props;
+const d = t(lang);
+const navPages: PageKey[] = ['home', 'menu', 'concept', 'access', 'faq', 'recruit'];
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href={pagePath(lang, 'home')} aria-label={d.ui.logoAlt}>
+      <img class="logo-mark" src={withBase('images/logo.webp')} alt="" width="480" height="515" />
+      <span class="logo-text" lang="ja">
+        <span class="logo-jp">中華そば 麦の星</span>
+        <span class="logo-en">{site.nameEn}</span>
+      </span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label={d.ui.openMenu}>
+      <ul class="nav-list">
+        {navPages.map((p) => (
+          <li><a href={pagePath(lang, p)} aria-current={p === page ? 'page' : undefined}>{d.nav[p]}</a></li>
+        ))}
+        <li class="nav-sns"><a href={site.instagram} target="_blank" rel="noopener"><InstagramIcon /> Instagram</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-link" href={site.instagram} target="_blank" rel="noopener" aria-label="Instagram"><InstagramIcon /></a>
+      <details class="lang-switch">
+        <summary aria-label={d.ui.language}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+          <span>{d.lang.label}</span>
+        </summary>
+        <ul>
+          {LANGS.map((l) => (
+            <li><a href={pagePath(l, page ?? 'home')} hreflang={t(l).lang.html} lang={t(l).lang.html} aria-current={l === lang ? 'true' : undefined}>{t(l).lang.label}</a></li>
+          ))}
+        </ul>
+      </details>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label={d.ui.openMenu} data-open={d.ui.openMenu} data-close={d.ui.closeMenu}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>

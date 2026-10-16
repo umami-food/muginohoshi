@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import { t, withBase, pagePath, type Lang } from '../lib/i18n';
+const { lang } = Astro.props as { lang: Lang };
+const d = t(lang);
+const c = d.concept;
+const isJa = lang === 'ja';
+const photos = [
+  { src: 'noodles-close.jpg', w: 1200, h: 900, alt: c.photoAlts.noodles },
+  { src: 'seimen-room.jpg', w: 1000, h: 1250, alt: c.photoAlts.seimen },
+  { src: 'shio.jpg', w: 860, h: 860, alt: d.home.signatureTitle },
+  { src: 'counter.jpg', w: 1000, h: 1250, alt: c.photoAlts.counter },
+];
+---
+<Base lang={lang} page="concept" title={d.seo.concept.title} description={d.seo.concept.description}>
+  <header class="concept-head">
+    <img src={withBase('images/hero.jpg')} alt="" width="1600" height="1144" />
+    <div class="wrap">
+      <h1>{c.title}</h1>
+      <p class={`concept-lead ${isJa ? 'is-vertical' : ''}`}>{c.lead}</p>
+    </div>
+  </header>
+  <div class="wrap concept-body">
+    {c.sections.map((s, i) => (
+      <section class={`concept-row ${i % 2 ? 'is-reverse' : ''}`}>
+        <img src={withBase('images/' + photos[i].src)} alt={photos[i].alt} width={photos[i].w} height={photos[i].h} loading="lazy" decoding="async" />
+        <div>
+          <h2>{s.title}</h2>
+          <p>{s.body}</p>
+        </div>
+      </section>
+    ))}
+    <p class="center"><a class="btn btn-line" href={pagePath(lang, 'menu')}>{d.ui.viewMenu}</a></p>
+  </div>
+</Base>

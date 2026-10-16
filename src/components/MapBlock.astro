@@ -1,0 +1,25 @@
+---
+import site from '../data/site.json';
+import { t, type Lang } from '../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const d = t(lang);
+const { lat, lng } = site.geo;
+const q = encodeURIComponent(site.name + ' ' + site.address.ja);
+const hl = { ja: 'ja', en: 'en', 'zh-hans': 'zh-CN', 'zh-hant': 'zh-TW', ko: 'ko' }[lang];
+const embed = `https://maps.google.com/maps?q=${q}&hl=${hl}&z=17&output=embed`;
+// 中国本土では Google マップが使えないため、高徳地図（Amap）も用意
+const links = [
+  { label: 'Google Maps', href: `https://www.google.com/maps/search/?api=1&query=${q}` },
+  { label: 'Apple Maps', href: `https://maps.apple.com/?q=${encodeURIComponent(site.nameEn)}&ll=${lat},${lng}` },
+  { label: '高德地图 Amap', href: `https://uri.amap.com/marker?position=${lng},${lat}&name=${encodeURIComponent(site.name)}` },
+  { label: '네이버 지도 Naver', href: `https://map.naver.com/p/search/${q}` },
+];
+---
+<div class="map-frame">
+  <iframe src={embed} title={d.access.mapTitle} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<p class="map-links-label">{d.ui.openMaps}</p>
+<div class="map-links">
+  {links.map((l) => <a href={l.href} target="_blank" rel="noopener">{l.label}</a>)}
+</div>
