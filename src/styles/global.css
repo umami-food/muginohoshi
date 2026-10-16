@@ -204,7 +204,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 }
 
 /* ---------- 料理のカード（メニュー・トップ共通） ---------- */
-.dish img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; display: block; margin-bottom: 0.9rem; }
+.dish img { width: 100%; aspect-ratio: 9 / 8; object-fit: cover; display: block; margin-bottom: 0.9rem; }
 .dish.is-product img { object-fit: contain; background: #fff; padding: 0.6rem; }
 .dish h3 { font-size: var(--step-1); margin-bottom: 0.2em; }
 .dish-desc { color: var(--ink-soft); font-size: var(--step--1); margin-bottom: 0.4em; }
@@ -277,12 +277,16 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .menu-group h2 { font-size: var(--step-2); padding-bottom: 0.4rem; border-bottom: 2px solid var(--ink); }
 .menu-featured { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(2, 1fr); gap: var(--space-l) var(--space-m); margin: var(--space-m) 0; }
 .menu-featured .dish.is-wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--space-m); align-items: center; }
-.menu-featured .dish.is-wide img { aspect-ratio: 4 / 3; margin: 0; }
+.menu-featured .dish.is-wide img { aspect-ratio: auto; margin: 0; }
+/* 縦長の写真は切らずにそのまま表示 */
+.menu-featured .dish.is-tall { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 440px) 1fr; gap: var(--space-m); align-items: center; }
+.menu-featured .dish.is-tall img { aspect-ratio: auto; margin: 0; }
+.menu-featured .dish.is-tall h3 { font-size: var(--step-2); }
 .menu-featured .dish.is-wide h3 { font-size: var(--step-3); }
 .menu-ja { font-size: var(--step--1); color: var(--ink-soft); margin: 0 0 0.3em; }
 @media (max-width: 760px) {
   .menu-featured { grid-template-columns: 1fr; }
-  .menu-featured .dish.is-wide { grid-template-columns: 1fr; }
+  .menu-featured .dish.is-wide, .menu-featured .dish.is-tall { grid-template-columns: 1fr; }
 }
 .menu-list { list-style: none; margin: 0; padding: 0; }
 .menu-list li { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px dotted var(--wheat); }

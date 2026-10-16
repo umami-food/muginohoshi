@@ -34,7 +34,7 @@ const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisoba
           {featured.length > 0 && (
             <div class="menu-featured">
               {featured.map((i: any) => (
-                <article class={`dish ${i.recommended || i.wide ? 'is-wide' : ''} ${i.fit === 'contain' ? 'is-product' : ''}`}>
+                <article class={`dish ${i.recommended || i.wide ? 'is-wide' : ''} ${i.tall ? 'is-tall' : ''} ${i.fit === 'contain' ? 'is-product' : ''}`}>
                   <img src={withBase('images/' + i.img)} alt={pick(i.name, lang)} width="1200" height="960" loading="lazy" decoding="async" />
                   <div class="dish-body">
                     {i.recommended && <p class="stamp">{d.ui.recommended}</p>}
