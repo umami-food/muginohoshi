@@ -36,7 +36,7 @@
 html:lang(zh-Hans) { --font-body: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; --font-display: "Songti SC", "STSong", "Noto Serif SC", "SimSun", serif; }
 html:lang(zh-Hant) { --font-body: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif; --font-display: "Songti TC", "Noto Serif TC", "PMingLiU", serif; }
 html:lang(ko) { --font-body: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif; --font-display: "AppleMyungjo", "Noto Serif KR", "Batang", serif; }
-[lang="ja"] { --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; --font-display: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+[lang="ja"] { --font-body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; --font-display: "Yuji Boku", "Zen Old Mincho", "Hiragino Mincho ProN", serif; --font-brush-soft: "Yuji Syuku", "Zen Old Mincho", serif; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px) + 1rem); }
@@ -87,7 +87,7 @@ p { margin: 0 0 1em; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--paper); }
 .header-inner { display: flex; align-items: center; gap: 1rem; min-height: var(--header-h); }
 .logo { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; flex-shrink: 0; }
-.logo-mark { width: auto; height: 56px; }
+.logo-mark { width: auto; height: 60px; }
 .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
 .logo-jp { font-family: var(--font-display); font-size: 1.05rem; letter-spacing: 0.12em; }
 .logo-en { font-family: var(--font-display); font-size: 0.68rem; letter-spacing: 0.3em; color: var(--ink-soft); }
@@ -344,7 +344,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .site-footer a:hover { color: var(--mustard); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-l); }
 .footer-shop { display: flex; gap: var(--space-m); align-items: flex-start; }
-.footer-logo { width: 96px; flex-shrink: 0; }
+.footer-logo { width: 120px; flex-shrink: 0; }
 .footer-shop p { margin: 0 0 0.4rem; }
 .footer-shop a { display: inline-flex; align-items: center; gap: 0.4rem; }
 .site-footer h2 { font-family: var(--font-body); font-size: var(--step--1); color: var(--wheat); margin-bottom: 0.6rem; }
@@ -408,3 +408,21 @@ a:hover { color: var(--mustard); }
 .signature-subs .dish.is-cutout img { padding: 4% 6%; }
 .cat-photo.is-cutout img { width: 260px; padding: 12px; }
 @media (max-width: 480px) { .cat-photo.is-cutout img { width: 150px; } }
+
+/* ---------- 麺を極める志（写真の上に大きな言葉） ---------- */
+.manifesto { position: relative; display: grid; place-items: center; min-height: min(78svh, 720px); overflow: hidden; background: var(--deep); }
+.manifesto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.38) saturate(.9); }
+.manifesto-text { position: relative; margin: 0; padding: var(--space-xl) 1.5rem; font-family: var(--font-display); color: var(--ink); text-align: center; font-size: var(--step-3); line-height: 1.6; text-shadow: 0 2px 12px rgba(0,0,0,.6); }
+.manifesto-text span { display: block; }
+.manifesto.is-vertical .manifesto-text { writing-mode: vertical-rl; text-align: start; font-size: clamp(2rem, 1rem + 3.4vw, 3.8rem); letter-spacing: 0.3em; line-height: 2; }
+.manifesto.is-vertical .manifesto-text span:nth-child(2) { padding-top: 2.2em; }
+.manifesto.is-vertical .manifesto-text::before { content: ""; display: block; inline-size: 3.5em; block-size: 0; border-left: 1px solid var(--mustard); margin: 0 0.4em 0 0.4em; }
+
+/* ---------- 和の筆文字（日本語ページ） ----------
+   見出しは太い筆（Yuji Boku）、店主の言葉は細い筆（Yuji Syuku） */
+:lang(ja) :is(h1, h2, h3) { font-weight: 400; }
+:lang(ja) .owner-text blockquote p { font-family: var(--font-brush-soft); font-size: var(--step-1); }
+:lang(ja) .philosophy-lines p, :lang(ja) .manifesto-text, :lang(ja) .hero-line { font-weight: 400; }
+:lang(ja) .logo-jp { font-family: var(--font-display); font-size: 1.15rem; }
+:lang(ja) .logo-en { font-family: "Zen Old Mincho", serif; }
+:lang(ja) .hero.is-vertical .hero-sub { font-family: "Zen Old Mincho", serif; }

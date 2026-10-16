@@ -92,7 +92,11 @@
     "howNote": "We do not take reservations. On days when a new dish is released, there may be a line outside.",
     "storeTitle": "About the shop",
     "vibeTitle": "A ramen shop that feels like a café.",
-    "vibeBody": "A white sign, a mustard-yellow entrance and warm string lights. Inside, a light wooden counter and clean, bright walls. Unusually for a ramen shop, about 40% of our guests are women. Feel free to drop in on your own."
+    "vibeBody": "A white sign, a mustard-yellow entrance and warm string lights. Inside, a light wooden counter and clean, bright walls. Unusually for a ramen shop, about 40% of our guests are women. Feel free to drop in on your own.",
+    "manifesto": [
+      "A will to master noodles.",
+      "A never-ending path of noodle making."
+    ]
   },
   "menu": {
     "title": "Menu",

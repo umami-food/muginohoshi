@@ -77,6 +77,11 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
     </div>
   </section>
 
+  <section class={`manifesto ${isJa ? 'is-vertical' : ''}`}>
+    <img src={withBase('images/noodles-close.jpg')} alt="" width="1200" height="900" loading="lazy" decoding="async" />
+    <p class="manifesto-text">{h.manifesto.map((l) => <span>{l}</span>)}</p>
+  </section>
+
   <section class="section philosophy">
     <div class="wrap philosophy-grid">
       <div class={`philosophy-lines ${isJa ? 'is-vertical' : ''}`}>
