@@ -11,7 +11,7 @@ const photos = [
   { src: 'noodles-close.jpg', w: 1200, h: 900, alt: c.photoAlts.noodles },
   { src: 'seimen-room.jpg', w: 1000, h: 1250, alt: c.photoAlts.seimen },
   { src: 'shio.jpg', w: 1280, h: 960, alt: d.home.signatureTitle },
-  { src: 'counter.jpg', w: 1000, h: 1250, alt: c.photoAlts.counter },
+  { src: 'cut-oisoba.webp', w: 350, h: 342, alt: d.home.oisobaTitle, cutout: true },
 ];
 ---
 <Base lang={lang} page="concept" title={d.seo.concept.title} description={d.seo.concept.description}>
@@ -25,7 +25,7 @@ const photos = [
   <div class="wrap concept-body">
     {c.sections.map((s, i) => (
       <section class={`concept-row ${i % 2 ? 'is-reverse' : ''}`}>
-        <img src={withBase('images/' + photos[i].src)} alt={photos[i].alt} width={photos[i].w} height={photos[i].h} loading="lazy" decoding="async" />
+        <img class={photos[i].cutout ? 'is-cutout' : undefined} src={withBase('images/' + photos[i].src)} alt={photos[i].alt} width={photos[i].w} height={photos[i].h} loading="lazy" decoding="async" />
         <div>
           <h2>{s.title}</h2>
           <p>{s.body}</p>
