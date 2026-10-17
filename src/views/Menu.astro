@@ -7,7 +7,7 @@ const { lang } = Astro.props as { lang: Lang };
 const d = t(lang);
 const m = d.menu;
 const cats = menu.categories as any[];
-const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisobaNote, rice: m.tkgNote };
+const notes: Record<string, string> = { chukasoba: m.chukaNote, limited: m.limitedNote, oisoba: m.oisobaNote, rice: m.tkgNote };
 ---
 <Base lang={lang} page="menu" title={d.seo.menu.title} description={d.seo.menu.description}>
   <PageHead title={m.title} lead={m.lead} />
@@ -41,6 +41,7 @@ const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisoba
                     <h3>{pick(i.name, lang)}</h3>
                     {lang !== 'ja' && <p class="menu-ja" lang="ja">{i.name.ja}</p>}
                     {i.desc && <p class="dish-desc">{pick(i.desc, lang)}</p>}
+                    {i.note && <p class="perk">{pick(i.note, lang)}</p>}
                     <p class="price">{yen(i.price)}</p>
                   </div>
                 </article>
@@ -55,6 +56,7 @@ const notes: Record<string, string> = { limited: m.limitedNote, oisoba: m.oisoba
                     <span class="menu-name">{pick(i.name, lang)}</span>
                     {lang !== 'ja' && <span class="menu-ja" lang="ja">{i.name.ja}</span>}
                     {i.desc && <span class="menu-desc muted">{pick(i.desc, lang)}</span>}
+                    {i.note && <span class="perk">{pick(i.note, lang)}</span>}
                   </div>
                   <span class="price">{yen(i.price)}</span>
                 </li>

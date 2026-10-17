@@ -112,7 +112,8 @@
     },
     "oisobaNote": "Oi-soba is a small, seasoned mazesoba. Kaedama is an extra serving of plain, unseasoned noodles.",
     "limitedNote": "Limited-time dishes may end when they sell out.",
-    "tkgNote": "TKG contains raw egg."
+    "tkgNote": "TKG contains raw egg.",
+    "chukaNote": "Every chuka soba (shio or shoyu) comes with a small cup of special soup. Our soups contain no additives or MSG."
   },
   "concept": {
     "title": "Our noodles",
@@ -128,7 +129,7 @@
       },
       {
         "title": "Seafood broth for shio, chicken broth for shoyu",
-        "body": "Our signature chuka soba comes in two kinds. The shio (salt) soup is made with seafood broth, and the shoyu (soy sauce) soup with chicken broth. Each is paired with its own noodles."
+        "body": "Our signature chuka soba comes in two kinds. The shio (salt) soup is made with seafood broth, and the shoyu (soy sauce) soup with chicken broth. Each is paired with its own noodles. Our soups contain no additives or MSG."
       },
       {
         "title": "One more kind of noodle with oi-soba",
@@ -171,6 +172,10 @@
       {
         "q": "How can I pay?",
         "a": "Cash only. Please buy a meal ticket at the ticket machine by the entrance first. Credit cards, e-money and QR code payments are not accepted."
+      },
+      {
+        "q": "What is the small cup of soup served with the chuka soba?",
+        "a": "It is our special soup, made from the umami of shellfish and vegetables. Drink it first, then enjoy your chuka soba — the umami synergy makes it taste even better."
       },
       {
         "q": "How do I order?",
@@ -227,5 +232,18 @@
     "name": "Imamura, owner",
     "quote": "I love ramen so much that I travel to popular shops in and outside Aichi just to eat. That love gives me all kinds of inspiration for creating new noodles. Nothing makes me happier than seeing guests enjoy a bowl I have put everything into.",
     "alt": "Owner Imamura standing in the kitchen with his arms crossed"
+  },
+  "soup": {
+    "title": "Special soup in a small cup",
+    "lead": "With every Chuka Soba (shio or shoyu), we serve a small cup of special soup just before your bowl arrives.",
+    "body": "The special soup is made with plenty of shellfish and vegetables, extracting only the umami from the ingredients. It contains different umami compounds from the chuka soba broth, so combining the two creates an “umami synergy.”",
+    "steps": [
+      "First, drink the special soup in the small cup.",
+      "Then enjoy your chuka soba — it will taste even better."
+    ],
+    "note": "This is only our recommendation. There are no rules, so please enjoy your meal however you like.",
+    "pureTitle": "No additives, no MSG",
+    "pureBody": "Our chuka soba contains no additives and no chemical seasonings (MSG). Enjoy the natural umami of glutamic, inosinic, guanylic and succinic acids from natural ingredients.",
+    "alt": "Special soup in a small cup"
   }
 }

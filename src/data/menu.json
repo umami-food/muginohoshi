@@ -130,7 +130,14 @@
             "ko": "아주 굵은 손주름면에 돼지 등지방을 더한 한 그릇."
           },
           "img": "cut-seabura.webp",
-          "cutout": true
+          "cutout": true,
+          "note": {
+            "ja": "※追い飯無料",
+            "en": "Free oi-meshi (rice to add at the end)",
+            "zh-hans": "免费追加白饭（最后拌进碗里）",
+            "zh-hant": "免費追加白飯（最後拌進碗裡）",
+            "ko": "오이메시(마지막에 넣는 밥) 무료"
+          }
         },
         {
           "id": "tsukemen",
@@ -148,6 +155,15 @@
             "zh-hans": "焙煎小麦面泡在浓厚的昆布水中，蘸着蘸汁享用。",
             "zh-hant": "焙煎小麥麵泡在濃厚的昆布水中，沾著沾汁享用。",
             "ko": "볶은 밀로 만든 면을 진한 다시마물에 담았습니다. 츠케지루(소스)에 찍어 드세요."
+          },
+          "img": "tsukemen.jpg",
+          "wide": true,
+          "note": {
+            "ja": "※麺大盛無料",
+            "en": "Large noodle portion: free",
+            "zh-hans": "面条加大免费",
+            "zh-hant": "麵量加大免費",
+            "ko": "면 곱빼기 무료"
           }
         }
       ]
@@ -174,7 +190,14 @@
             "ko": "고구마와 단호박을 올린 가을 기간 한정 한 그릇."
           },
           "cutout": true,
-          "wide": true
+          "wide": true,
+          "note": {
+            "ja": "※追い飯無料",
+            "en": "Free oi-meshi (rice to add at the end)",
+            "zh-hans": "免费追加白饭（最后拌进碗里）",
+            "zh-hant": "免費追加白飯（最後拌進碗裡）",
+            "ko": "오이메시(마지막에 넣는 밥) 무료"
+          }
         },
         {
           "id": "cement",
@@ -286,6 +309,19 @@
           },
           "img": "cut-tkg.webp",
           "cutout": true
+        },
+        {
+          "id": "ajitama-gohan",
+          "price": 300,
+          "img": "cut-ajitama-gohan.webp",
+          "cutout": true,
+          "name": {
+            "ja": "鰯削り節の味玉ごはん",
+            "en": "Ajitama rice with sardine flakes",
+            "zh-hans": "沙丁鱼片溏心蛋饭",
+            "zh-hant": "沙丁魚片糖心蛋飯",
+            "ko": "정어리포 아지타마 밥"
+          }
         },
         {
           "id": "chashu-meshi",

@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import InfoList from '../components/InfoList.astro';
 import MapBlock from '../components/MapBlock.astro';
 import OwnerBlock from '../components/OwnerBlock.astro';
+import SoupBlock from '../components/SoupBlock.astro';
 import site from '../data/site.json';
 import menu from '../data/menu.json';
 import { t, pick, pagePath, withBase, yen, type Lang } from '../lib/i18n';
@@ -63,6 +64,8 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
     </div>
     <p class="center signature-cta"><a class="btn btn-light" href={pagePath(lang, 'menu')}>{d.ui.viewMenu}</a></p>
   </section>
+
+  <SoupBlock lang={lang} />
 
   <section class="section vibe">
     <div class="wrap vibe-grid">

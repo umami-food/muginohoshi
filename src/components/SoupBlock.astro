@@ -1,0 +1,22 @@
+---
+import { t, withBase, type Lang } from '../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang).soup;
+---
+<section class="section soup">
+  <div class="wrap soup-grid">
+    <img src={withBase('images/guinomi.jpg')} alt={s.alt} width="800" height="800" loading="lazy" decoding="async" />
+    <div>
+      <h2 class="section-title">{s.title}</h2>
+      <p class="soup-lead">{s.lead}</p>
+      <p>{s.body}</p>
+      <ol class="steps">{s.steps.map((x) => <li>{x}</li>)}</ol>
+      <p class="muted">{s.note}</p>
+      <div class="pure">
+        <h3>{s.pureTitle}</h3>
+        <p>{s.pureBody}</p>
+      </div>
+    </div>
+  </div>
+</section>
