@@ -226,6 +226,16 @@
             "zh-hans": "“水泥”小鱼干拉面 加溏心蛋",
             "zh-hant": "「水泥」小魚乾拉麵 加糖心蛋",
             "ko": "‘시멘트’ 니보시 + 아지타마"
+          },
+          "img": "cut-cement-ajitama.webp",
+          "cutout": true,
+          "wide": true,
+          "desc": {
+            "ja": "煮干しを贅沢に使った、セメントのように濃い色のスープ。",
+            "en": "An intensely rich dried-sardine (niboshi) broth, thick and grey like cement.",
+            "zh-hans": "大量使用小鱼干熬制，汤色浓如水泥。",
+            "zh-hant": "大量使用小魚乾熬製，湯色濃如水泥。",
+            "ko": "멸치(니보시)를 듬뿍 써서 시멘트처럼 진한 색의 수프."
           }
         }
       ]
