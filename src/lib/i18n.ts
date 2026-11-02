@@ -15,9 +15,9 @@ export function t(lang: Lang): Dict {
   return dict[lang] as Dict;
 }
 
-export type PageKey = 'home' | 'menu' | 'concept' | 'access' | 'faq' | 'recruit';
-export const PAGES: PageKey[] = ['home', 'menu', 'concept', 'access', 'faq', 'recruit'];
-const slug: Record<PageKey, string> = { home: '', menu: 'menu/', concept: 'concept/', access: 'access/', faq: 'faq/', recruit: 'recruit/' };
+export type PageKey = 'home' | 'menu' | 'concept' | 'access' | 'faq' | 'recruit' | 'privacy';
+export const PAGES: PageKey[] = ['home', 'menu', 'concept', 'access', 'faq', 'recruit', 'privacy'];
+const slug: Record<PageKey, string> = { home: '', menu: 'menu/', concept: 'concept/', access: 'access/', faq: 'faq/', recruit: 'recruit/', privacy: 'privacy/' };
 
 /** サイト内リンク（base パスを考慮） */
 export function withBase(path: string) {

@@ -15,7 +15,8 @@
     "concept": "關於麵條",
     "access": "店鋪・交通",
     "faq": "常見問題",
-    "recruit": "徵才"
+    "recruit": "徵才",
+    "privacy": "私隱政策"
   },
   "ui": {
     "skip": "跳到主要內容",
@@ -67,6 +68,10 @@
     "recruit": {
       "title": "徵才｜中華そば 麦の星 MUGI no HOSHI",
       "description": "麥之星正在招募正職與兼職人員。"
+    },
+    "privacy": {
+      "title": "私隱政策｜中華そば 麦の星 MUGI no HOSHI",
+      "description": "關於本網站使用Google Analytics及外部服務的說明。"
     }
   },
   "home": {
@@ -245,5 +250,29 @@
     "pureTitle": "無添加・不使用化學調味料",
     "pureBody": "麥之星的中華拉麵無添加、不使用化學調味料（味精）。請享受天然食材帶來的麩胺酸、肌苷酸、鳥苷酸、琥珀酸的鮮味。",
     "alt": "小杯裡的特製湯"
+  },
+  "privacy": {
+    "title": "私隱政策",
+    "updated": "制定日期：2026年11月3日",
+    "sections": [
+      {
+        "title": "關於瀏覽分析",
+        "body": "為了解網站的使用情況並改善網站，本網站使用Google LLC提供的瀏覽分析工具「Google Analytics」。Google Analytics透過Cookie收集瀏覽的頁面、停留時間、大致地區及使用的裝置等資訊。這些資訊不包含姓名、聯絡方式等可識別個人身份的資訊。"
+      },
+      {
+        "title": "如不希望被收集",
+        "body": "您可於瀏覽器設定中停用Cookie，或使用Google提供的「Google Analytics停用瀏覽器外掛程式」以停止收集。關於Google如何處理這些資訊，請參閱Google的政策。"
+      },
+      {
+        "title": "關於外部服務",
+        "body": "本網站包含連往Instagram、Tabelog、Google地圖、招聘網站等外部服務的連結。您於這些網站輸入的資訊將依照各服務的政策處理。"
+      },
+      {
+        "title": "聯絡我們",
+        "body": "如對本政策有任何疑問，請致電本店。"
+      }
+    ],
+    "googlePolicy": "Google私隱權政策",
+    "optout": "Google Analytics停用瀏覽器外掛程式"
   }
 }

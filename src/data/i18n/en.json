@@ -15,7 +15,8 @@
     "concept": "Our noodles",
     "access": "Access",
     "faq": "FAQ",
-    "recruit": "Careers"
+    "recruit": "Careers",
+    "privacy": "Privacy Policy"
   },
   "ui": {
     "skip": "Skip to content",
@@ -67,6 +68,10 @@
     "recruit": {
       "title": "Careers｜中華そば 麦の星 MUGI no HOSHI",
       "description": "MUGI no HOSHI is hiring full-time and part-time staff."
+    },
+    "privacy": {
+      "title": "Privacy Policy｜中華そば 麦の星 MUGI no HOSHI",
+      "description": "How this website uses Google Analytics and links to external services."
     }
   },
   "home": {
@@ -245,5 +250,29 @@
     "pureTitle": "No additives, no MSG",
     "pureBody": "Our chuka soba contains no additives and no chemical seasonings (MSG). Enjoy the natural umami of glutamic, inosinic, guanylic and succinic acids from natural ingredients.",
     "alt": "Special soup in a small cup"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Effective: November 3, 2026",
+    "sections": [
+      {
+        "title": "Analytics",
+        "body": "To understand how this website is used and to improve it, we use Google Analytics, a service provided by Google LLC. Google Analytics uses cookies to collect information such as the pages you view, time spent on the site, approximate region and device type. This information does not include anything that identifies you personally, such as your name or contact details."
+      },
+      {
+        "title": "Opting out",
+        "body": "You can stop this collection by disabling cookies in your browser or by installing the Google Analytics Opt-out Browser Add-on. For details on how Google handles this information, please see Google’s policy."
+      },
+      {
+        "title": "External services",
+        "body": "This website links to external services such as Instagram, Tabelog, Google Maps and job listing sites. Information you enter on those sites is handled under each service’s own policy."
+      },
+      {
+        "title": "Contact",
+        "body": "For questions about this policy, please contact us by phone."
+      }
+    ],
+    "googlePolicy": "Google Privacy Policy",
+    "optout": "Google Analytics Opt-out Browser Add-on"
   }
 }
