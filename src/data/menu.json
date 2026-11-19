@@ -172,31 +172,42 @@
       "id": "limited",
       "items": [
         {
-          "id": "koro-aki",
+          "id": "tantanmen",
           "price": 1200,
-          "name": {
-            "ja": "京小麦の香露そば“秋”",
-            "en": "Kyoto Wheat Koro Soba “Autumn”",
-            "zh-hans": "京都小麦 香露拉面“秋”",
-            "zh-hant": "京都小麥 香露拉麵「秋」",
-            "ko": "교토 밀 코로 소바 ‘가을’"
-          },
-          "img": "cut-koro-aki.webp",
-          "desc": {
-            "ja": "麦の星創業以来、初めて使用する小麦である、伊澤製粉（株）謹製の“京小麦プレミアム”を使用し、切刃8番、加水率43%の平打ち麺を使用。京小麦プレミアムの持つ、独特なコシとしなやかさを前面に出しつつ、これに、あや姫もブレンドする事で、エアリーなふわふわ感と、咀嚼時のもちもち感を両立。麺肌も非常にツルツルとした、史上最高峰に喉越し豊かな麺に仕上がりました。",
-            "en": "Made with “Kyoto Wheat Premium” from Izawa Seifun Co., Ltd. — a flour we are using for the first time since MUGI no HOSHI opened. Flat noodles cut with a No. 8 blade at 43% hydration. We bring out the distinctive firmness and suppleness of Kyoto Wheat Premium, then blend in Ayahime wheat for an airy, fluffy lightness and a chewy bite. The surface is silky smooth — our smoothest-slurping noodle ever.",
-            "zh-hans": "使用伊泽制粉株式会社出品的“京小麦Premium”，这是麦之星创业以来首次使用的小麦。采用8号切刀、加水率43%的宽面。在突出京小麦Premium独特嚼劲与柔韧的同时，混入“绫姬”小麦，兼具轻盈蓬松感与咀嚼时的Q弹口感。面体表面极为光滑，是史上入喉最顺滑的面条。",
-            "zh-hant": "使用伊澤製粉株式會社出品的「京小麥Premium」，這是麥之星創業以來首次使用的小麥。採用8號切刀、加水率43%的寬麵。在突顯京小麥Premium獨特嚼勁與柔韌的同時，混入「綾姬」小麥，兼具輕盈蓬鬆感與咀嚼時的Q彈口感。麵體表面極為光滑，是史上入喉最順滑的麵條。",
-            "ko": "무기노호시 창업 이래 처음 사용하는 밀, 이자와제분(주)의 '교코무기 프리미엄'으로 8번 절단날, 가수율 43%의 넓적한 면을 만들었습니다. 교코무기 프리미엄 특유의 탄력과 유연함을 살리면서 '아야히메' 밀을 블렌딩해 폭신한 가벼움과 씹을 때의 쫀득함을 함께 담았습니다. 면 표면도 매우 매끈해, 지금까지 중 가장 목 넘김이 좋은 면으로 완성되었습니다."
-          },
+          "img": "cut-tantanmen.webp",
           "cutout": true,
           "wide": true,
-          "note": {
-            "ja": "※追い飯無料",
-            "en": "Free oi-meshi (rice to add at the end)",
-            "zh-hans": "免费追加白饭（最后拌进碗里）",
-            "zh-hant": "免費追加白飯（最後拌進碗裡）",
-            "ko": "오이메시(마지막에 넣는 밥) 무료"
+          "name": {
+            "ja": "担々麺〜2026ver.〜",
+            "en": "Tantanmen ~2026 ver.~",
+            "zh-hans": "担担面〜2026版〜",
+            "zh-hant": "擔擔麵〜2026版〜",
+            "ko": "탄탄멘 ~2026 ver.~"
+          },
+          "desc": {
+            "ja": "スープは鶏、煮干し、昆布に豆乳を合わせて、そこに自家製チーマージャンを溶かして鍋で一煮立ちさせます。\n自家製ラー油は、辛さに弱い私が満を持して作り上げた、誰でも最後まで美味しく食べられる塩梅の優しさに仕上げています。香りを出す為、太白胡麻油主体で大蒜、生姜、玉葱で香味油を作り、更にコク出しの為に九州麦味噌をたっぷり加えてラー油を抽出しました。\nそして、主役の麺はきらり姫主体で切り刃12番、厚みを0.80㍉に設定した中細平打ち麺を使用。滑らかな啜り心地と歯応えを両立させ、担々麺の豊かな胡麻の風味をしっかりと持ち上げてくれる麺になっています。",
+            "en": "The soup combines chicken, niboshi (dried sardines) and kombu with soy milk. Our house-made sesame paste is then melted in and brought to a boil in the pot.\nOur house-made chili oil was crafted by the owner, who is not good with spicy food, so anyone can enjoy it to the very last drop. For aroma, we make a fragrant oil mainly from untoasted sesame oil with garlic, ginger and onion, then add plenty of Kyushu barley miso for depth before extracting the chili oil.\nThe star of the bowl is our medium-thin flat noodle, made mainly from Kirarihime wheat and cut with a No. 12 blade at 0.80 mm thick. It is smooth to slurp yet firm to the bite, and carries the rich sesame flavor of the tantanmen.",
+            "zh-hans": "汤头以鸡、小鱼干、昆布搭配豆浆，再化入自制芝麻酱，在锅中煮滚。\n自制辣油由不太能吃辣的店主精心调制，辣度温和，任何人都能美味地吃到最后。为了带出香气，以太白芝麻油为主，加入大蒜、生姜、洋葱制作香味油，再加入大量九州麦味噌增添醇厚，萃取成辣油。\n主角面条以Kirarihime（きらり姫）小麦为主，采用12号切刀、厚度0.80毫米的中细宽面。兼具顺滑入口与嚼劲，能充分带起担担面浓郁的芝麻风味。",
+            "zh-hant": "湯頭以雞、小魚乾、昆布搭配豆漿，再化入自製芝麻醬，在鍋中煮滾。\n自製辣油由不太能吃辣的店主精心調製，辣度溫和，任何人都能美味地吃到最後。為了帶出香氣，以太白芝麻油為主，加入大蒜、生薑、洋蔥製作香味油，再加入大量九州麥味噌增添醇厚，萃取成辣油。\n主角麵條以Kirarihime（きらり姫）小麥為主，採用12號切刀、厚度0.80毫米的中細寬麵。兼具順滑入口與嚼勁，能充分帶起擔擔麵濃郁的芝麻風味。",
+            "ko": "수프는 닭, 멸치(니보시), 다시마에 두유를 더하고, 직접 만든 지마장(참깨 소스)을 풀어 냄비에서 한 번 끓여 냅니다.\n직접 만든 라유는 매운 것을 잘 못 먹는 점주가 공들여 완성한, 누구나 끝까지 맛있게 먹을 수 있는 순한 매운맛입니다. 향을 위해 태백 참기름을 중심으로 마늘·생강·양파로 향미유를 만들고, 깊은 맛을 위해 규슈 보리 된장을 듬뿍 넣어 라유를 추출했습니다.\n주인공인 면은 '기라리히메' 밀을 중심으로 12번 절단날, 두께 0.80mm로 설정한 중세 넓적면입니다. 매끄러운 목 넘김과 씹는 맛을 모두 갖추고, 탄탄멘의 풍부한 참깨 풍미를 잘 끌어올려 줍니다."
+          },
+          "photoNote": {
+            "ja": "※写真は味玉付き",
+            "en": "Photo shows the version with ajitama.",
+            "zh-hans": "※图片为加溏心蛋版",
+            "zh-hant": "※圖片為加糖心蛋版",
+            "ko": "※사진은 아지타마 추가 메뉴입니다"
+          }
+        },
+        {
+          "id": "tantanmen-ajitama",
+          "price": 1350,
+          "name": {
+            "ja": "【味玉付き】担々麺〜2026ver.〜",
+            "en": "Tantanmen ~2026 ver.~ with Ajitama",
+            "zh-hans": "担担面〜2026版〜 加溏心蛋",
+            "zh-hant": "擔擔麵〜2026版〜 加糖心蛋",
+            "ko": "탄탄멘 ~2026 ver.~ + 아지타마"
           }
         },
         {

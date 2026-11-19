@@ -41,6 +41,7 @@ const notes: Record<string, string> = { chukasoba: m.chukaNote, limited: m.limit
                     <h3>{pick(i.name, lang)}</h3>
                     {lang !== 'ja' && <p class="menu-ja" lang="ja">{i.name.ja}</p>}
                     {i.desc && <p class="dish-desc">{pick(i.desc, lang)}</p>}
+                    {i.photoNote && <p class="photo-note">{pick(i.photoNote, lang)}</p>}
                     {i.note && <p class="perk">{pick(i.note, lang)}</p>}
                     <p class="price">{yen(i.price)}</p>
                   </div>

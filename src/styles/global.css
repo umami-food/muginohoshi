@@ -437,3 +437,7 @@ a:hover { color: var(--mustard); }
 /* こだわりページの切り抜き写真 */
 .concept-row img.is-cutout { object-fit: contain; box-shadow: none; padding: 4% 12%; filter: drop-shadow(0 18px 22px rgba(0,0,0,.6));
   background: radial-gradient(ellipse 55% 55% at 50% 52%, rgba(226,174,54,.16), rgba(226,174,54,0) 70%); }
+
+/* 長い説明文は段落の区切り（改行）を生かす */
+.dish-desc { white-space: pre-line; }
+.photo-note { color: var(--ink-soft); font-size: 0.8rem; margin: 0 0 0.4em; }
