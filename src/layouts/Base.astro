@@ -57,6 +57,27 @@ const bannerData = page
   <meta name="twitter:card" content="summary_large_image" />
 
   {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  {site.analyticsId && (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${site.analyticsId}`}></script>
+      <script is:inline define:vars={{ gaId: site.analyticsId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', gaId);
+        // 電話・地図・Instagram のクリックを計測
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[href]');
+          if (!a) return;
+          var h = a.getAttribute('href') || '';
+          if (h.indexOf('tel:') === 0) gtag('event', 'phone_call', { link_url: h });
+          else if (h.indexOf('google.com/maps') > -1) gtag('event', 'map_click', { link_url: h });
+          else if (h.indexOf('instagram.com') > -1) gtag('event', 'instagram_click', { link_url: h });
+        });
+      </script>
+    </>
+  )}
 </head>
 <body>
   <a class="skip-link" href="#main">{d.ui.skip}</a>

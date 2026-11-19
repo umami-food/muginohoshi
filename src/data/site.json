@@ -112,5 +112,6 @@
   "recruit": {
     "regularUrl": "https://saiyo.page/123330/job-list/sort=osusume&page=1&baitFlgList=regular&freewords=%E9%BA%A6%E3%81%AE%E6%98%9F",
     "partUrl": "https://saiyo.page/123330/job-list/sort=osusume&page=1&baitFlgList=normal&freewords=%E9%BA%A6%E3%81%AE%E6%98%9F"
-  }
+  },
+  "analyticsId": "G-N65SD36623"
 }
