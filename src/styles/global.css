@@ -441,3 +441,6 @@ a:hover { color: var(--mustard); }
 /* 長い説明文は段落の区切り（改行）を生かす */
 .dish-desc { white-space: pre-line; }
 .photo-note { color: var(--ink-soft); font-size: 0.8rem; margin: 0 0 0.4em; }
+
+/* 料理名の改行（menu.json の名前に改行を入れた場合） */
+.dish h3, .dish .menu-ja { white-space: pre-line; }

@@ -172,42 +172,35 @@
       "id": "limited",
       "items": [
         {
-          "id": "tantanmen",
-          "price": 1200,
+          "id": "tantanmen-ajitama",
+          "price": 1350,
           "img": "cut-tantanmen.webp",
           "cutout": true,
           "wide": true,
+          "name": {
+            "ja": "【味玉付き】担々麺\n〜2026ver.〜",
+            "en": "Tantanmen with Ajitama\n~2026 ver.~",
+            "zh-hans": "担担面 加溏心蛋\n〜2026版〜",
+            "zh-hant": "擔擔麵 加糖心蛋\n〜2026版〜",
+            "ko": "탄탄멘 + 아지타마\n~2026 ver.~"
+          },
+          "desc": {
+            "ja": "鶏・煮干し・昆布のスープに、豆乳と自家製チーマージャンを合わせた胡麻の香り豊かな一杯。\n自家製ラー油は、辛いものが苦手な方でも最後までおいしく食べられる優しい辛さです。\n麺は「きらり姫」主体の中細平打ち麺。滑らかな啜り心地と歯応えで、胡麻の風味をしっかり持ち上げます。",
+            "en": "A sesame-rich bowl: chicken, niboshi and kombu soup blended with soy milk and our house-made sesame paste.\nOur house-made chili oil is gentle, so even those who don't like spicy food can enjoy it to the last drop.\nMedium-thin flat noodles made mainly from Kirarihime wheat — smooth to slurp, firm to the bite, and great at carrying the sesame flavor.",
+            "zh-hans": "以鸡、小鱼干、昆布熬汤，加入豆浆和自制芝麻酱，芝麻香气浓郁的一碗。\n自制辣油辣度温和，不太能吃辣的人也能美味地吃到最后。\n面条以Kirarihime（きらり姫）小麦为主的中细宽面，顺滑有嚼劲，能充分带起芝麻风味。",
+            "zh-hant": "以雞、小魚乾、昆布熬湯，加入豆漿和自製芝麻醬，芝麻香氣濃郁的一碗。\n自製辣油辣度溫和，不太能吃辣的人也能美味地吃到最後。\n麵條以Kirarihime（きらり姫）小麥為主的中細寬麵，順滑有嚼勁，能充分帶起芝麻風味。",
+            "ko": "닭·멸치·다시마 수프에 두유와 직접 만든 지마장(참깨 소스)을 더한, 참깨 향이 풍부한 한 그릇.\n직접 만든 라유는 매운 것을 잘 못 드시는 분도 끝까지 맛있게 드실 수 있는 순한 매운맛입니다.\n면은 '기라리히메' 밀 중심의 중세 넓적면. 매끄러운 목 넘김과 씹는 맛으로 참깨 풍미를 잘 살려 줍니다."
+          }
+        },
+        {
+          "id": "tantanmen",
+          "price": 1200,
           "name": {
             "ja": "担々麺〜2026ver.〜",
             "en": "Tantanmen ~2026 ver.~",
             "zh-hans": "担担面〜2026版〜",
             "zh-hant": "擔擔麵〜2026版〜",
             "ko": "탄탄멘 ~2026 ver.~"
-          },
-          "desc": {
-            "ja": "スープは鶏、煮干し、昆布に豆乳を合わせて、そこに自家製チーマージャンを溶かして鍋で一煮立ちさせます。\n自家製ラー油は、辛さに弱い私が満を持して作り上げた、誰でも最後まで美味しく食べられる塩梅の優しさに仕上げています。香りを出す為、太白胡麻油主体で大蒜、生姜、玉葱で香味油を作り、更にコク出しの為に九州麦味噌をたっぷり加えてラー油を抽出しました。\nそして、主役の麺はきらり姫主体で切り刃12番、厚みを0.80㍉に設定した中細平打ち麺を使用。滑らかな啜り心地と歯応えを両立させ、担々麺の豊かな胡麻の風味をしっかりと持ち上げてくれる麺になっています。",
-            "en": "The soup combines chicken, niboshi (dried sardines) and kombu with soy milk. Our house-made sesame paste is then melted in and brought to a boil in the pot.\nOur house-made chili oil was crafted by the owner, who is not good with spicy food, so anyone can enjoy it to the very last drop. For aroma, we make a fragrant oil mainly from untoasted sesame oil with garlic, ginger and onion, then add plenty of Kyushu barley miso for depth before extracting the chili oil.\nThe star of the bowl is our medium-thin flat noodle, made mainly from Kirarihime wheat and cut with a No. 12 blade at 0.80 mm thick. It is smooth to slurp yet firm to the bite, and carries the rich sesame flavor of the tantanmen.",
-            "zh-hans": "汤头以鸡、小鱼干、昆布搭配豆浆，再化入自制芝麻酱，在锅中煮滚。\n自制辣油由不太能吃辣的店主精心调制，辣度温和，任何人都能美味地吃到最后。为了带出香气，以太白芝麻油为主，加入大蒜、生姜、洋葱制作香味油，再加入大量九州麦味噌增添醇厚，萃取成辣油。\n主角面条以Kirarihime（きらり姫）小麦为主，采用12号切刀、厚度0.80毫米的中细宽面。兼具顺滑入口与嚼劲，能充分带起担担面浓郁的芝麻风味。",
-            "zh-hant": "湯頭以雞、小魚乾、昆布搭配豆漿，再化入自製芝麻醬，在鍋中煮滾。\n自製辣油由不太能吃辣的店主精心調製，辣度溫和，任何人都能美味地吃到最後。為了帶出香氣，以太白芝麻油為主，加入大蒜、生薑、洋蔥製作香味油，再加入大量九州麥味噌增添醇厚，萃取成辣油。\n主角麵條以Kirarihime（きらり姫）小麥為主，採用12號切刀、厚度0.80毫米的中細寬麵。兼具順滑入口與嚼勁，能充分帶起擔擔麵濃郁的芝麻風味。",
-            "ko": "수프는 닭, 멸치(니보시), 다시마에 두유를 더하고, 직접 만든 지마장(참깨 소스)을 풀어 냄비에서 한 번 끓여 냅니다.\n직접 만든 라유는 매운 것을 잘 못 먹는 점주가 공들여 완성한, 누구나 끝까지 맛있게 먹을 수 있는 순한 매운맛입니다. 향을 위해 태백 참기름을 중심으로 마늘·생강·양파로 향미유를 만들고, 깊은 맛을 위해 규슈 보리 된장을 듬뿍 넣어 라유를 추출했습니다.\n주인공인 면은 '기라리히메' 밀을 중심으로 12번 절단날, 두께 0.80mm로 설정한 중세 넓적면입니다. 매끄러운 목 넘김과 씹는 맛을 모두 갖추고, 탄탄멘의 풍부한 참깨 풍미를 잘 끌어올려 줍니다."
-          },
-          "photoNote": {
-            "ja": "※写真は味玉付き",
-            "en": "Photo shows the version with ajitama.",
-            "zh-hans": "※图片为加溏心蛋版",
-            "zh-hant": "※圖片為加糖心蛋版",
-            "ko": "※사진은 아지타마 추가 메뉴입니다"
-          }
-        },
-        {
-          "id": "tantanmen-ajitama",
-          "price": 1350,
-          "name": {
-            "ja": "【味玉付き】担々麺〜2026ver.〜",
-            "en": "Tantanmen ~2026 ver.~ with Ajitama",
-            "zh-hans": "担担面〜2026版〜 加溏心蛋",
-            "zh-hant": "擔擔麵〜2026版〜 加糖心蛋",
-            "ko": "탄탄멘 ~2026 ver.~ + 아지타마"
           }
         },
         {
